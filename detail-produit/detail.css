@@ -1,9 +1,24 @@
-
+header{
+    max-width: 100%;
+}
 /* DETAIL PRODUIT DESIGN  */
 
 .square{
     width: 20px;
     height: 20px;
+}
+.square:hover{
+    transform: scale(0.9);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+.saumon{
+    background-color: #FFA07A;
+}
+.saumon-dark{
+    background-color: #E9967A;
+}
+.marron{
+    background-color: #C38B4B;
 }
 .size ul li{
     width: 35px !important;
@@ -15,10 +30,183 @@
 }
 .addCart{
     background-color: var(--gris-clair);
+    width: auto;
+    height: auto;
 }
+
+/* design carousel */
 .carousel-inner{
     display: flex !important;
+    padding: 1em;
 }
 .carousel-item{
-    display: block !important;
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100%/4)!important;
 }
+.carousel-item .card {
+    width: 50%;
+}
+.carousel-item .card img{
+    width: 10%;
+}
+.carousel-control-prev, .carousel-control-next{
+    background-color: var(--gris-clair);
+    width: 6vh;
+    height: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    background-size: 60%;
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-size: 60%;
+}
+
+
+
+
+/* design list group  */
+.list-group .active{
+    background-color: var(--marron);
+    border: none;
+}
+.tab-pane hr{
+    background-color: var(--gris-clair);
+    opacity: 1;
+    border: 2px solid var(--gris-clair);
+    color: var(--brown);
+    width: 70px;
+    position: relative;
+    top: -10px;
+}
+.reviews .card {
+    border :none;
+}
+.reviews .card .card-body{
+    border :none;
+    margin-top: -20px !important;
+}
+#text{
+   font-size: 13px;
+}
+.reviews h5 {
+    margin :0;
+}
+.star .bi-star-fill , .star .bi-star-half , .price{
+    color: var(--brown)!important;
+}
+.reviews i {
+   background-color: var(--gris-clair)!important;
+}
+.leave-review .fa-star {
+   color: var(--brown) !important;
+}
+#texte{
+    font-size: 13px;
+}
+form input , form textarea{
+    background-color: var(--gris-clair)!important;
+    border-radius: 0 !important;
+ }
+form input::placeholder , form textarea::placeholder{
+    font-size: 13px
+ }
+form button{
+    border-radius: 0 !important;
+    background-color: var(--brown) !important;
+    color: white !important;
+ }
+
+ @media  screen and (min-width : 768px ) and (max-width : 1024px){
+
+    .carousel-control-prev, .carousel-control-next{
+        background-color: none;
+        width: 3vh;
+        height: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+ }
+ @media  screen and (min-width : 576px ) and (max-width : 768px) {
+
+    #icons-bottom{
+        margin-top: 20px;
+        margin-left: 5px !important;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        background-color: none;
+        width: 3vh;
+        height: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #carouselExample{
+        max-width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    #list-tab{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+
+    }
+
+
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reviews #card .card-body{
+        margin:10px 0 0 0 !important;
+    }
+    
+ }
+
+ @media  screen and (max-width : 576px ) {
+  
+    #icons-bottom{
+        margin-top: 20px;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        background-color: none;
+        width: 3vh;
+        height: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #carouselExample{
+        max-width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    #list-tab{
+        display: grid;
+        grid-template-columns: auto auto ;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reviews #card .card-body{
+        margin:10px 0 0 0 !important;
+    }
+    
+ }

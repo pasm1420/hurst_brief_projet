@@ -27,38 +27,64 @@
   <!-- mettre des hovers dans le select categories price etc -->
   <!-- mettre un hover dans les card comme dans le site -->
   <!-- Gerer le floting btn-->
-    <header id="header">
-        <div class="d-flex justify-content-between px-4 pt-3 fixed-top bg-white">
-            <div class="icon">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="icon d-flex justify-content-center">
-                <img src="../public/images/logo.png" alt="" class="logo-header">
-            </div>
-            <div class="icon">
-                <div class="position-relative">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="notifications" class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
-                        12
-                      </span>
-                </div>
+  <header id="header">
+    <div class="nav-fixed d-flex justify-content-between align-items-center p-4 fixed-top bg-white">
+        <div class="burger-menu" id="burger">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="icon" id="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="list-menu list-group" id="list-nav">
+            <a href="#" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
+            <a href="../blog/blog.html" class="list-solo list-group-item list-group-item-action">BLOG</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">CONTACT</a>
+        </div>
+        <script>
+            let menu = document.getElementById('menu');
+            let burger = document.getElementById('burger');
+            let nav = document.getElementById('list-nav');
+            menu.addEventListener('click', function(){
+                burger.style.display = 'block';
+                nav.style.left = "0";
+                this.style.visibility = 'hidden';
+            });
+            burger.addEventListener('click', function(){
+                burger.style.display = 'none';
+                nav.style.left = "-400px";
+                menu.style.visibility = 'visible';
+            });
+        </script>
+        <div class="icon d-flex justify-content-center">
+            <img src="../public/images/logo.png" alt="" class="logo-header w-75">
+        </div>
+        <div class="icon">
+            <div class="position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="notifications"
+                    class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
+                    12
+                </span>
             </div>
         </div>
-        <div class="banner d-flex justify-content-center align-items-center flex-column mt-4">
-            <h1 class="text-center text-white">SINGLE PRODUCT</h1>
-            <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>SINGLE PRODUCT</span></p>
-
-        </div>
-
-    </header>
+    </div>
+    <div class="banner d-flex justify-content-center align-items-center flex-column">
+        <h1 class="text-center text-white">SINGLE PRODUCT</h1>
+        <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>SINGLE PRODUCT</span></p>
+    </div>
+</header>
     <main class="my-5">
-        <div class="container">
+        <div class="container .container-fluid">
           <div class="row bg-white">
             <div class="col-md-4">
-              <img src="../public/images/blog/1.jpg" class="img-fluid mt-4 ms-3" alt="...">
+              <img src="../public/images/single-product/large/1.jpg" class="img-fluid mt-4 ms-3" alt="...">
             </div>
-            <div class="col-md-8 mt-4">
-              <div class="d-flex justify-content-between">
+            <div class="col-md-7 mt-4 ms-2">
+              <div class="d-flex justify-content-between mb-2">
                 <h6>DUMMY PRODUCT NAME</h6>
                 <div class="star">
                   <i class="bi bi-star-fill"></i>
@@ -69,10 +95,10 @@
                   <span>(27 Ratings)</span>
                 </div>
               </div>
-              <div class="price">
+              <div class="price fs-5 fw-bold mb-2">
                 $ &nbsp;56.20
               </div>
-              <div>
+              <div id="texte">
                 <p>
                   There are many variations of passages of Lorem Ipsum available, but the majority have be suffered alteration in some form, by injected humou or randomised words which donot look even slightly believable. If you are going to use a passage of Lorem Ipsum
                 </p>
@@ -80,19 +106,19 @@
               <div class="d-flex">
                 <p class="fw-bold me-3">Color</p>
                 <ul class="nav">
-                  <li class="square bg-danger nav-item mx-2">
+                  <li class="square saumon nav-item mx-2">
+                    <a href="#" class="nav-link">&nbsp;</a>
+                  </li>
+                  <li class="square saumon-dark nav-item mx-2">
+                    <a href="#" class="nav-link">&nbsp;</a>
+                  </li>
+                  <li class="square marron nav-item mx-2">
                     <a href="#" class="nav-link">&nbsp;</a>
                   </li>
                   <li class="square bg-danger nav-item mx-2">
                     <a href="#" class="nav-link">&nbsp;</a>
                   </li>
-                  <li class="square bg-danger nav-item mx-2">
-                    <a href="#" class="nav-link">&nbsp;</a>
-                  </li>
-                  <li class="square bg-danger nav-item mx-2">
-                    <a href="#" class="nav-link">&nbsp;</a>
-                  </li>
-                  <li class="square bg-danger nav-item mx-2">
+                  <li class="square bg-info nav-item mx-2">
                     <a href="#" class="nav-link">&nbsp;</a>
                   </li>
                 </ul>
@@ -118,7 +144,7 @@
                 </ul>
               </div>
               <div class="row mb-3">
-                <div class="col-4 addCart ms-2">
+                <div class="col-4 col-sm-5 col-md-6 addCart ms-2 px-4">
                   <div class="d-flex p-1 justify-content-center">
                     <div class="border-end border-dark-subtle px-4 text-center">
                       <i class="fa-solid fa-minus "></i>
@@ -131,8 +157,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-1"></div>
-                <div class="col-4 addCart me-3">
+                <!-- <div class="col-1"></div> -->
+                <div class="col-4 col-sm-5 col-md-6 addCart ms-3" id="icons-bottom">
                   <div class="d-flex p-1 justify-content-center">
                     <div class="border-end border-dark-subtle px-4 text-center">
                       <i class="fa-regular fa-heart"></i>
@@ -148,44 +174,197 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-3"></div>
+                <!-- <div class="col-3"></div> -->
               </div>
               <div class="row">
                 <div id="carouselExample" class="carousel slide">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <div class="card" style="width: 18rem;">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                      <div class="col m-2 image-wrapper">
+                        <img src="../public/images/single-product/medium/1.jpg" class="card-img-top" alt="...">
                       </div>
                     </div>
                     <div class="carousel-item">
-                      <div class="card" style="width: 18rem;">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                      <div class="col m-2">
+                        <img src="../public/images/single-product/medium/2.jpg" class="card-img-top" alt="...">
                       </div>
                     </div>
                     <div class="carousel-item">
-                      <div class="card" style="width: 18rem;">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                      <div class="col m-2">
+                        <img src="../public/images/single-product/medium/3.jpg" class="card-img-top" alt="...">
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="col m-2">
+                        <img src="../public/images/single-product/medium/1.jpg" class="card-img-top" alt="...">
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="col m-2">
+                        <img src="../public/images/single-product/medium/1.jpg" class="card-img-top" alt="...">
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="col m-2">
+                        <img src="../public/images/single-product/medium/1.jpg" class="card-img-top" alt="...">
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="col m-2">
+                        <img src="../public/images/single-product/medium/1.jpg" class="card-img-top" alt="...">
                       </div>
                     </div>
                   </div>
-                  <button class="carousel-control-prev bg-danger" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                   </button>
-                  <button class="carousel-control-next bg-danger" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
+                 
                 </div>
               </div>
             </div>
           </div>
+    
+          <div class="row  my-4 py-2" id="content">
+              <div class="col-3 col-sm-12" >
+                <div class="list-group " id="list-tab" role="tablist">
+                  <a class="list-group-item list-group-item-action mb-1 fw-medium border" id="list-description-list" data-bs-toggle="list" href="#list-description" role="tab" aria-controls="list-description">Description</a>
+                  <a class="list-group-item list-group-item-action mb-1 fw-medium border active" id="list-reviews-list" data-bs-toggle="list" href="#list-reviews" role="tab" aria-controls="list-reviews">Reviews</a>
+                  <a class="list-group-item list-group-item-action mb-1 fw-medium border" id="list-information-list" data-bs-toggle="list" href="#list-information" role="tab" aria-controls="list-information">Information</a>
+                  <a class="list-group-item list-group-item-action mb-1 fw-medium border" id="list-tags-list" data-bs-toggle="list" href="#list-tags" role="tab" aria-controls="list-tags">tags</a>
+                </div>
+              </div>
+              <div class="col-9 bg-white col-sm-12">
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade  p-4" id="list-description" role="tabpanel" aria-labelledby="list-description-list">
+                    <h6>DUMMY PRODUCT NAME</h6>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at est 
+                      bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at est 
+                      bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at est 
+                      bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at est 
+                      bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade show active p-4" id="list-reviews" role="tabpanel" aria-labelledby="list-reviews-list">
+                    <div>
+                      <h6>CUSTMER REVIEWS</h6>
+                      <hr>
+                      <div class="row reviews">
+                        <div class="card mb-3">
+                          <div class="row g-0">
+                            <div class="col-md-4 col-lg-2">
+                              <img src="../public/images/reviewer/1.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8 col-lg-10" id="card">
+                              <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                  <div>
+                                    <h5 class="card-title">GERALD BARNES</h5>
+                                    <p class="card-text"><small class="text-body-secondary">27 Juin,2021 at 2:30pm</small></p>
+                                  </div>
+                                  <div>
+                                    <i class="bi bi-reply-fill px-3 py-2"></i>
+                                    <i class="bi bi-x-lg px-3 py-2"></i>
+                                  </div>
+                                </div>
+  
+                                <p class="card-text" id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-3">
+                          <div class="row g-0">
+                            <div class="col-md-4 col-lg-2">
+                              <img src="../public/images/reviewer/1.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8 col-lg-10" id="card">
+                              <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                  <div>
+                                    <h5 class="card-title">GERALD BARNES</h5>
+                                    <p class="card-text"><small class="text-body-secondary">27 Juin,2021 at 2:30pm</small></p>
+                                  </div>
+                                  <div>
+                                    <i class="bi bi-reply-fill px-3 py-2"></i>
+                                    <i class="bi bi-x-lg px-3 py-2"></i>
+                                  </div>
+                                </div>
+  
+                                <p class="card-text" id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h6>LEAVE YOUR REVIEW</h6>
+                      <hr>
+                      <p>Your Ratings</p>
+                      <div class="d-flex leave-review">
+                        <div class="border-end border-dark-subtle pe-4 text-center">
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="border-end border-dark-subtle px-4 text-center">
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="border-end border-dark-subtle px-4 text-center">
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="px-4 text-center">
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                      </div>
+                      <form action="" class="my-4">
+                        <div class="row">
+                          <div class="col-6">
+                            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Your Name here...">
+                          </div>
+                          <div class="col-6">
+                            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Subject...">
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="mb-3">
+                            <textarea class="form-control" id="exampleFormControlTextarea1"  placeholder="Your review here..." rows="3"></textarea>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn">Submit Review</button>
+                       
+                      </form>
+                    </div>
+                    
+                  </div>
+                  <div class="tab-pane fade" id="list-information" role="tabpanel" aria-labelledby="list-information-list">...</div>
+                  <div class="tab-pane fade" id="list-tags" role="tabpanel" aria-labelledby="list-tags-list">...</div>
+                </div>
+              </div>
+          </div>
+
 
         </div>
-
-
-
     </main>
     <footer>
         <div class="container py-5">
@@ -243,7 +422,7 @@
             <label for="newsletter1" class="visually-hidden">Email address</label>
             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
         </div>
-        <button class="btn bg-white my-2 fw-bold" type="button" id="subscribe">Subscribe</button>
+        <button class="btn bg-white my-2 fw-bold text-black" type="button" id="subscribe">Subscribe</button>
         </form>
       </div>
             </div>
@@ -272,7 +451,8 @@
         
             <!-- <a class="position-absolute bottom-25 end-25 bg-danger" href="#header">yo</a> -->
     </footer>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
