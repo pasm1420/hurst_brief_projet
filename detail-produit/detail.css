@@ -1,0 +1,24 @@
+
+/* DETAIL PRODUIT DESIGN  */
+
+.square{
+    width: 20px;
+    height: 20px;
+}
+.size ul li{
+    width: 35px !important;
+    margin-right: 4px;
+}
+.size ul li:last-child{
+    width: 35px !important;
+    margin-left: -5px;
+}
+.addCart{
+    background-color: var(--gris-clair);
+}
+.carousel-inner{
+    display: flex !important;
+}
+.carousel-item{
+    display: block !important;
+}

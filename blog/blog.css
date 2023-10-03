@@ -1,64 +1,5 @@
-:root{
-    --gris-clair : #F6F6F6;
-}
-#notifications{
-    padding: 2px 3px;
-    font-size: 9px;
-    top: 10%;
-    background-color: var(--brown);
-}
-body{
-    background-color: var(--gris-clair);
-}
-.logo-header{
-    width: 50%;
 
-}
-header .banner{
-    background: linear-gradient(0deg, #04061b67, #04061b67), url("../public/images/bg/1.jpg");
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    width: 100%;
-
-}
-header .root{
-    top: 210px;
-    left: 8%;
-    font-size: 13px;
-}
-#inf{
-font-size: 14px;
-}
-#circle{
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    border: 1px solid black;
-}
-#point{
-    padding: 2px;
-    background-color: var(--gris);
-}
-#subscribe{
-    color: black;
-}
-footer{
-background-color: var(--gris);
-}
-footer hr{
-    background-color: var(--brown);
-    opacity: 1;
-    border: 2px solid var(--brown);
-    color: var(--brown);
-    width: 70px;
-    position: relative;
-    top: -10px;
-}
-#bottom{
-    background-color: var(--gris-clair);
-}
+/* BLOG DESIGN  */
 .active{
 color: var(--brown);
 }
@@ -67,8 +8,8 @@ color: var(--brown);
     color: var(--brown);
     height: 37px;
 }
-#date-card{
-    color: var(--brown);
+#date-card , #pagination ul li a:hover{
+    color: var(--brown) !important;
 }
 #read-more{
     color: var(--brown);
@@ -77,6 +18,10 @@ color: var(--brown);
 .card p{
     font-size: 12px;
     text-align: justify;
+}
+.card img{
+    width: 100%;
+    border-radius: 0 !important;
 }
 #pagination{
     font-size: 14px;

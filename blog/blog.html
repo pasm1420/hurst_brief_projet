@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
     <!-- Fin favicon -->
     
     <!-- Bootstrap Icon -->
@@ -17,13 +17,18 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fin fontawsome -->
+    <link rel="stylesheet" href="../public/style/header-footer.css">
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="../public/style/couleur.css">
     <title>BLOG</title>
 </head>
 <body class="p-0 m-0">
-    <header>
-        <div class="d-flex justify-content-between px-4 pt-3 mb-2">
+  <!-- A FAIRE -->
+  <!-- mettre des hovers dans le select categories price etc -->
+  <!-- mettre un hover dans les card comme dans le site -->
+  <!-- Gerer le floting btn-->
+    <header id="header">
+        <div class="d-flex justify-content-between px-4 pt-3 fixed-top bg-white">
             <div class="icon">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -39,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="banner d-flex justify-content-center align-items-center flex-column">
+        <div class="banner d-flex justify-content-center align-items-center flex-column mt-4">
             <h1 class="text-center text-white">BLOG</h1>
             <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>BLOG</span></p>
 
@@ -48,7 +53,7 @@
 
 
     </header>
-    <main class="mt-5">
+    <main class="my-5">
         <div class="container">
             <div class="top d-flex justify-content-between bg-white px-2">
                 <nav class="nav">
@@ -57,7 +62,8 @@
                     <a class="nav-link text-body-secondary"  href="#">Link</a>
                     <a class="nav-link text-body-secondary"  aria-disabled="true">Size</a>
                   </nav>
-                <div class="mt-2 mx-2">
+                  <!--bottom-0 end-0 permet de cacher le showing a md  -->
+                <div class="mt-2 mx-2 d-none d-md-block">
                     <p>
                         Showing 01-09 of 17 Results
                     </p>
@@ -68,8 +74,10 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -89,8 +97,10 @@
                     </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -110,8 +120,10 @@
                     </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -131,8 +143,10 @@
                     </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -152,8 +166,10 @@
                     </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -173,8 +189,10 @@
                     </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -194,8 +212,10 @@
                     </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -215,8 +235,10 @@
                     </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -236,8 +258,10 @@
                     </div>
                     <div class="col">
                       <div class="card h-100">
-                        <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
                             <div class="d-flex">
                                 <div class="px-2 mt-1" id="border-card">
                                     30
@@ -255,6 +279,7 @@
                         </div>
                       </div>
                     </div>
+                  
                     
                   </div>
 
@@ -263,12 +288,15 @@
                 <div>
                     <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <p>
-                    <span class="mx-2">01</span>
-                    <span class="mx-2">02</span>
-                    <span class="mx-2">03</span>
-                    <span class="mx-2">04</span>
-                </p>
+                <div>
+                    <ul class="nav">
+                      <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">01</a></li>
+                      <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">02</a></li>
+                      <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">03</a></li>
+                      <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">04</a></li>
+
+                    </ul>
+                </div>
                 <div>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
@@ -283,7 +311,7 @@
     <footer>
         <div class="container py-5">
             <div class="row">
-      <div class="col-4 mb-3">
+      <div class="mb-3 col-md-6 col-lg-4">
         <h5>CONTACT US</h5>
         <hr>
         <ul class="nav d-flex" id="inf">
@@ -293,9 +321,9 @@
                 <p>Email</p>
             </div>
             <div>
-                <p class="mx-5">28 Green Tower,Street Name,<br>New York City,USA</p>
-                <p class="mx-5 mt-4">012345- 123456789</p>
-                <p class="mx-5 mt-1">your-email@gmail.com</p>
+                <p class="ms-4">28 Green Tower,Street Name,<br>New York City,USA</p>
+                <p class="ms-4 mt-4">012345- 123456789</p>
+                <p class="ms-4 mt-1">your-email@gmail.com</p>
 
             </div>
             <div class="d-flex">
@@ -304,31 +332,31 @@
         </ul>
       </div>
 
-      <div class="col-2 mb-3">
+      <div class="mb-3 col-md-6 col-lg-2">
         <h5>ACCOUNTS</h5>
         <hr>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><span id="circle"><span id="point" class="rounded-circle">&nbsp;</span></span>My Account</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">My Wishlist</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">My Cart</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sign in</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Check out</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Account</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Wishlist</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Cart</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Sign in</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Check out</a></li>
         </ul>
       </div>
 
-      <div class="col-2  mb-3">
+      <div class="mb-3 col-md-6 col-lg-2">
         <h5>SHIPPING</h5>
         <hr>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Products</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Top Sellers</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Manufacturers</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Suppliers</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Specials</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>New Products</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Top Sellers</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Manufacturers</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Suppliers</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Specials</a></li>
         </ul>
       </div>
 
-      <div class="col-4  mb-3">
+      <div class="mb-3 col-md-6 col-lg-4">
         <form>
           <h5>Email Newsletters</h5>
           <hr>
@@ -336,7 +364,7 @@
             <label for="newsletter1" class="visually-hidden">Email address</label>
             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
         </div>
-        <button class="btn bg-white my-2" type="button" id="subscribe">Subscribe</button>
+        <button class="btn bg-white my-2 fw-bold" type="button" id="subscribe">Subscribe</button>
         </form>
       </div>
             </div>
@@ -344,7 +372,7 @@
         </div>
         <div  id="bottom">
             <div class="container">
-                <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
+                <div class="d-flex flex-column flex-sm-row justify-content-between">
                     <div>
                         <p>©Code Carnival 2021.All Rights Reserved</p>
                         <ul class="list-unstyled d-flex">
@@ -363,6 +391,7 @@
             </div>
             </div>
         
+            <!-- <a class="position-absolute bottom-25 end-25 bg-danger" href="#header">yo</a> -->
     </footer>
 </body>
 </html>

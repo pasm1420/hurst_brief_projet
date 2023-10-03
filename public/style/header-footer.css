@@ -1,0 +1,62 @@
+:root{
+    --gris-clair : #F6F6F6;
+}
+#notifications{
+    padding: 2px 3px;
+    font-size: 9px;
+    top: 10%;
+    background-color: var(--brown);
+}
+body{
+    background-color: var(--gris-clair);
+}
+.logo-header{
+    width: 50%;
+
+}
+header .banner{
+    background: linear-gradient(0deg, #04061b67, #04061b67), url("../images/bg/1.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+
+}
+header .root{
+    top: 200px;
+    left: 8%;
+    font-size: 13px;
+}
+
+
+/* FOOTER  */
+#bottom{
+    background-color: var(--gris-clair);
+} 
+#inf{
+    font-size: 14px;
+    }
+#subscribe{
+    color: black;
+    background-color: var(--gris-clair)!important;
+
+}
+footer{
+background-color: var(--gris);
+}
+footer hr{
+    background-color: var(--brown);
+    opacity: 1;
+    border: 2px solid var(--brown);
+    color: var(--brown);
+    width: 70px;
+    position: relative;
+    top: -10px;
+}
+footer ul li a:hover{
+    color: var(--brown)!important;
+}
+footer input{
+    background-color: var(--gris-clair)!important;
+}
