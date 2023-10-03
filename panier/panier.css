@@ -84,6 +84,12 @@ body {
     .section-panier {
         overflow-x: scroll;
     }
+    body {
+        overflow-x: hidden;
+    }
+}
+.section-panier {
+    padding: 30px;
 }
 .section-panier table {
     width: 100%;
@@ -98,6 +104,12 @@ body {
     align-items: center;
     text-align: center;
     margin: 10px 0;
+    margin-top: 0;
+}
+.table-cart-head
+{
+    background-color: #F6F6F6;
+    padding: 12px;
 }
 .section-panier th span {
     text-align: center;
@@ -135,10 +147,13 @@ body {
     font-size: 0.7em;
 }
 
-
+/* .visible-status {
+    position: relative;
+    left: 25%;
+} */
 .invisible-status {
-    visibility: hidden;
-    position: absolute;
+    display: none;
+    /* left: -25%; */
     min-width: 90px;
 }
 .left-content,
@@ -209,10 +224,6 @@ body {
     background-color: var(--brown);
 }
 
-body {
-    background-color: var(--gris-clair);
-}
-
 .logo-header {
     width: 50%;
 
@@ -235,8 +246,6 @@ header .root {
     font-size: 14px;
     opacity: 0.9;
 }
-
-
 /* FOOTER  */
 #bottom {
     background-color: var(--gris-clair);
@@ -272,8 +281,4 @@ footer ul li a:hover {
 
 footer input {
     background-color: var(--gris-clair) !important;
-}
-
-section {
-    border: 1px solid black;
 }

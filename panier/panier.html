@@ -229,9 +229,9 @@
                 cc.addEventListener('click', function () {
                     for (let index = 0; index < istatus.length; index++) {
                         for (let index = 0; index < istatus.length; index++) {
-                            istatus[index].style.visibility = 'hidden';
+                            istatus[index].style.display = 'none';
                         }
-                        vstatus[index].style.visibility = 'visible';
+                        vstatus[index].style.display = 'block';
                         vstatus[index].style.backgroundColor = 'white';
                         vstatus[index].style.border = 'none';
                         c1.style.backgroundColor = 'white';
@@ -246,9 +246,9 @@
                 c1.addEventListener('click', function () {
                     for (let index = 0; index < istatus.length; index++) {
                         for (let index = 0; index < istatus.length; index++) {
-                            istatus[index].style.visibility = 'visible';
+                            istatus[index].style.display = 'flex';
                         }
-                        vstatus[index].style.visibility = 'hidden';
+                        vstatus[index].style.display = 'none';
                         this.style.backgroundColor = '#CAA46A';
                         this.style.color = 'white';
                         cc.style.color = 'black';
@@ -314,7 +314,7 @@
     </main>
     <footer>
         <div class="container py-5">
-            <div class="row ms-2">
+            <div class="row ms">
                 <div class="mb-3 col-md-6 col-lg-4">
                     <h5>CONTACT US</h5>
                     <hr>
