@@ -23,36 +23,65 @@
 </head>
 <body class="p-0 m-0">
     <header id="header">
-        <div class="d-flex justify-content-between px-4 pt-3 mb-2">
-            <div class="icon">
+        <div class="nav-fixed d-flex justify-content-between align-items-center p-4 fixed-top bg-white">
+            <div class="burger-menu" id="burger">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="icon" id="menu">
                 <i class="fa-solid fa-bars"></i>
             </div>
+            <div class="list-menu list-group" id="list-nav">
+                <a href="#" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
+                <a href="../about/about.html" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">BLOG</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">CONTACT</a>
+            </div>
+            <script>
+                let menu = document.getElementById('menu');
+                let burger = document.getElementById('burger');
+                let nav = document.getElementById('list-nav');
+                menu.addEventListener('click', function () {
+                    burger.style.display = 'block';
+                    nav.style.left = "0";
+                    this.style.visibility = 'hidden';
+                });
+                burger.addEventListener('click', function () {
+                    burger.style.display = 'none';
+                    nav.style.left = "-400px";
+                    menu.style.visibility = 'visible';
+                });
+            </script>
             <div class="icon d-flex justify-content-center">
-                <img src="../public/images/logo.png" alt="" class="logo-header">
+                <img src="../public/images/logo.png" alt="" class="logo-header w-75">
             </div>
             <div class="icon">
                 <div class="position-relative">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="notifications" class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
-                        12
-                      </span>
+                    <a href="../panier/panier.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="notifications"
+                            class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
+                            2
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="banner d-flex justify-content-center align-items-center flex-column">
             <h1 class="text-center text-white">ABOUT</h1>
             <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>ABOUT</span></p>
-
         </div>
     </header>
     <main class="container p-5">
         <section id="about-hurst" class="row bg-body px-3 pb-4">
             <div class="about-hurst-left col-lg col-sm-12 col-md ">
-            <img src="../public/images/bg/about.png" alt="" class="w-100">
+                <img src="../public/images/bg/about.png" alt="" class="w-100">
             </div>
             <div class="about-hurst-right col-lg col-sm-12 col-md">
                 <div class="hr-content">
                     <h3 class="fw-bold">ABOUT HURST</h3>
+                    <div class="l-c-trait mb-4"></div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, qui explicabo. 
                         Laboriosam, esse fuga voluptatum cumque eum vel iure vitae aspernatur molestias, 
@@ -172,10 +201,10 @@
             </div>
         </section>
     </main>
-    <footer class="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-8 col-sm-12 m-y-3 p-xl-3">
+    <footer>
+        <div class="container py-5">
+            <div class="row ms-2">
+                <div class="mb-3 col-md-6 col-lg-4">
                     <h5>CONTACT US</h5>
                     <hr>
                     <ul class="nav d-flex" id="inf">
@@ -185,63 +214,47 @@
                             <p>Email</p>
                         </div>
                         <div>
-                            <p class="mx-5">28 Green Tower,Street Name,<br>New York City,USA</p>
-                            <p class="mx-5 mt-4">012345- 123456789</p>
-                            <p class="mx-5 mt-1">your-email@gmail.com</p>
-    
+                            <p class="ms-4">28 Green Tower,Street Name,<br>New York City,USA</p>
+                            <p class="ms-4 mt-4">012345- 123456789</p>
+                            <p class="ms-4 mt-1">your-email@gmail.com</p>
                         </div>
                         <div class="d-flex">
                         </div>
-    
                     </ul>
                 </div>
-    
-                <div class="col-lg-2 col-md-4 col-sm-12 m-y-3 p-xl-3">
+                <div class="mb-3 col-md-6 col-lg-2">
                     <h5>ACCOUNTS</h5>
                     <hr>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">My Account</a></li>
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">My Wishlist</a></li>
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">My Cart</a></li>
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">Sign In</a></li>
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">Checkout</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Account</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Wishlist</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Cart</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Sign in</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Check out</a></li>
                     </ul>
                 </div>
-    
-                <div class="col-lg-2 col-md-4 col-sm-12 m-y-3 p-xl-3">
+                <div class="mb-3 col-md-6 col-lg-2">
                     <h5>SHIPPING</h5>
                     <hr>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">New Products</a></li>
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">Top Sellers</a></li>
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">Manufacturers</a>
-                        </li>
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">Suppliers</a></li>
-                        <li class="nav-item mb-2 d-flex align-items-center gap-2"><i
-                                class="circle fa-solid fa-circle"></i><a href="#"
-                                class="nav-link p-0 text-body-secondary">Specials</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>New Products</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Top Sellers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Manufacturers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Suppliers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Specials</a></li>
                     </ul>
                 </div>
-    
-                <div class="col-lg-4 col-md-8 col-sm-12 m-y-3 p-xl-3">
+                <div class="mb-3 col-md-6 col-lg-4">
                     <form>
                         <h5>Email Newsletters</h5>
                         <hr>
@@ -249,15 +262,14 @@
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
                         </div>
-                        <button class="btn bg-white my-2" type="button" id="subscribe">Subscribe</button>
+                        <button class="btn bg-white my-2 fw-bold" type="button" id="subscribe">Subscribe</button>
                     </form>
                 </div>
             </div>
-    
         </div>
         <div id="bottom">
             <div class="container">
-                <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
+                <div class="d-flex flex-column flex-sm-row justify-content-between">
                     <div>
                         <p>©Code Carnival 2021.All Rights Reserved</p>
                         <ul class="list-unstyled d-flex">
@@ -282,6 +294,7 @@
             </div>
         </div>
     
+        <!-- <a class="position-absolute bottom-25 end-25 bg-danger" href="#header">yo</a> -->
     </footer>
 </body>
 </html>

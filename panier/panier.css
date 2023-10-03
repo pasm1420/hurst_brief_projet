@@ -65,16 +65,16 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-/* .component-content:hover {
-    color: white;
-    background-color: var(--marron);
-} */
 .component-content :only-child {
     opacity: 0.8;
 }
 .panier-component:first-child .component-content  {
     background-color:var(--marron);
     color: white;
+}
+
+.list-ele {
+    display: flex;
 }
 
 .product-thumbnail img{
@@ -272,4 +272,8 @@ footer ul li a:hover {
 
 footer input {
     background-color: var(--gris-clair) !important;
+}
+
+section {
+    border: 1px solid black;
 }
