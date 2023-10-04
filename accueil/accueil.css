@@ -43,6 +43,7 @@ main .container-fluid .container  .bannerright{
     background-color: #F5F4F2; 
     justify-content: center;
     align-items: center;
+    width: 70%;
 }
 .carousel-control-prev-icon,.carousel-control-next-icon{
     background-color: gray;
@@ -56,30 +57,33 @@ main .container-fluid .container  .bannerright{
     /* display: flex; */
     /* justify-content: end; */
     /* background-color: red; */
-    /* margin-top: 30%; */
+    /* margin-top: 30%; */rg
 }
 
 
 
 main .container-fluid .container .bannerright .imagebannerright  img{
-    margin-left: 10%;
+    margin-left: 0%;
     
 }
 
 main  .container-fluid .container .bannerright .texbannerright{
-    margin-right: 5%;
+    margin-right: 0%;
     margin-top: 15%;
     margin-left: 3%;
     
 } 
+.bannerleft{
+    width: 30%;
+}
 
 
 /* bannerleft1 */
 
 .bannerleft1 .textbannerleft1{
-    position:absolute;
+    /* position:absolute; */
     left: 10%;
-    top: 44%;
+    top: 24%;
     /* border: 1px solid red; */
 }
 .bannerleft1 .textbannerleft1 .bouttonBuyNow{
@@ -111,7 +115,8 @@ main  .container-fluid .container .bannerright .texbannerright{
     position: absolute;
     bottom: 1%;
     left: 12%;
-    width: 17%;
+    width: 18%;
+    text-align: right;
 }
 
 #boutonBuy {
