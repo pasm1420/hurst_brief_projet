@@ -58,6 +58,10 @@ body {
 .panier-part {
     margin-top: 50px;
 }
+#check{
+    text-decoration: none;
+    color: black;
+}
 .component-content {
     background-color: white;
     text-align: center;
