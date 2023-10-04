@@ -260,6 +260,10 @@ header .banner {
     margin-top: 89px;
     width: 100%;
 }
+header .banner a{
+    color: white;
+    text-decoration: none;
+}
 
 header .root {
     top: 290px;
