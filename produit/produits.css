@@ -23,13 +23,15 @@ header .root{
     font-size: 13px;
 }
 .categories{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     width: 100%;
     margin-top: 2%;
     background-color: white;
+    padding: 15px;
+    box-shadow: 6px 8px 5px rgb(141, 140, 140);
 }
 .container{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     display: flex;
     gap: 2%;
     flex-wrap: wrap;
@@ -44,7 +46,7 @@ header .root{
     margin-top: 6%;
     margin-left: 6%;
     box-sizing: border-box;
-    
+    box-shadow: 6px 8px 5px rgb(141, 140, 140);
 }
 .card-img{
     background-image: url(image/1.jpg);
@@ -55,49 +57,59 @@ header .root{
     width: 20%;
     margin-left: 3%;
     height: 10%;
-    
+    margin-top: 4%;
+    margin-bottom: 26%;
 }
 .new{
     display: flex;
     justify-content: space-between;
-    margin-top: -800%;
     position: relative;
     /* color: white; */
     /* margin-right: 500%; */
+    width: 100px;
+    /* border: 1px solid #000; */
 }
 .ne{
-    border: 1px solid #000;
-    margin-left: -15px;
+    /* border: 1px solid #000; */
     background-color:rgb(218, 169, 106);
-    /* margin-top: -20%; */
-    padding: 5px;
     color: white;
+    margin-right: -2%;
+    margin-left: -100%;
+    margin-top: -90%;
+    height: 10%;
 }
 .price{
-    border: 1px solid #000;
-    margin-right: 0%;
-    margin-top: 200%;
+    /* border: 1px solid #000; */
     color: rgb(218, 169, 106);
+    margin-right: -1%;
+    margin-left: -30%;
+    margin-top: -90%;
+     height: 10%;
+}
+#prix{
+    margin-left: 45%;
 }
 .card-body{
-    border: 1px solid #000;  
+    /* border: 1px solid #000;   */
+}
+.card-text{
+    margin-top: -40%; 
 }
 .star{
-    border: 1px solid #000;
-    margin-top: 5%;
+    /* border: 1px solid #000; */
+    margin-top: -10%;
     font-size: 10px;
     width: 50%;
-    margin-left: 15%;
+    margin-left: 30%;
     
 }
 .icone{
-    border: 1px solid #000;
     margin-top: 10%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     background-color: #f1f0f0;
-    margin-bottom: -33%;
+    margin-bottom: -25%;
 }
 nav{
     align-items: center;
