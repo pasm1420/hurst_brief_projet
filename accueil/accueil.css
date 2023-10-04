@@ -112,11 +112,12 @@ main  .container-fluid .container .bannerright .texbannerright{
 /* bannerleft2 */
 
 .banner-brief {
+    display: grid;
     position: absolute;
-    bottom: 1%;
-    left: 12%;
+    top: 500px;
+    /* left: 12%; */
     width: 18%;
-    text-align: right;
+    text-align: left;
 }
 
 #boutonBuy {
