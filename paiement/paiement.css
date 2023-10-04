@@ -568,6 +568,15 @@ header .root {
     font-size: 14px;
     opacity: 0.9;
 }
+.card-head .gris:focus-within{
+    background-color: #CAA46A;
+    color: white;
+}
+.button-one:focus-within{
+    background-color: #9f4a3e;
+    color: white;
+}
+
 .card-head .gris{
     background-color: white;
     color: grey;
@@ -578,14 +587,14 @@ header .root {
 
 
 }
-.card-head .beige{
+/* .card-head .beige{
     background-color: var(--marron);
     color: white;
     height: 70px;
     width: 20%;
     border: none;
     box-shadow: 2px 5px 2px #ded5d5;
-}
+} */
 .cardleft{
     width: 60%;
     /* margin-left: 10%; */

@@ -106,87 +106,117 @@
                         </button>
                  </div>
 
-
+              <form class="was-validated">
+            
+          
                              <!-- informations clients -->
-                 <div class="details row d-flex justify-content-evenly mt-5">
+                 <div class="details row d-flex justify-content-evenly mt-5 needs-validation"  novalidate>
                         <div class="left col-sm-6 col-md-5">
                           <h4>BILLING DETAILS</h4>
-                          <input class="form-control bg-light-subtle mb-3" type="text" value="Your name here..." aria-label="readonly input example" readonly>
-                          <input class="form-control bg-light-subtle mb-3" type="text" value="Email address here..." aria-label="readonly input example" readonly>
-                          <input class="form-control bg-light-subtle mb-3" type="text" value="Phone here..." aria-label="readonly input example" readonly>
-                          <input class="form-control bg-light-subtle mb-3" type="text" value="Company name here..." aria-label="readonly input example" readonly>
-                          <div class="input-group mb-3">
-                            <select class="form-select bg-light-subtle" id="inputGroupSelect01">
-                              <option selected>Contry</option>
-                              <option value="1">Bangladesh</option>
+                          <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your name here...">
+                          </div>                          
+                          <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email address here...">
+                          </div>                           
+                          <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone here...">
+                          </div>                           
+                          <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Company name here...">
+                          </div> 
+                          <div class="mb-3">
+                            <select class="form-select" required aria-label="select example">
+                              <option value="">Contry</option>
+                              <option value="1">Bengladesh</option>
                               <option value="2">United States</option>
                               <option value="3">United Kingdom</option>
                               <option value="4">Australia</option>
                               <option value="5">Canada</option>
                             </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
                           </div>
-                          <div class="input-group mb-3">
-                            <select class="form-select bg-light-subtle" id="inputGroupSelect01">
-                              <option selected>State</option>
+                          <div class="mb-3">
+                            <select class="form-select" required aria-label="select example">
+                              <option value="">State</option>
                               <option value="1">Dhaka</option>
                               <option value="2">New York</option>
                               <option value="3">London</option>
                               <option value="4">Melbourne</option>
                               <option value="5">Ottawa</option>
                             </select>
-                          </div>
-                          <div class="input-group mb-3">
-                            <select class="form-select bg-light-subtle" id="inputGroupSelect01">
-                              <option selected>Town/City</option>
-                              <option value="1">Bangladesh</option>
-                              <option value="2">United States</option>
-                              <option value="3">United Kingdom</option>
-                              <option value="4">Australia</option>
-                              <option value="5">Canada</option>
-                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
                           </div>
                           <div class="mb-3">
-                            <textarea class="form-control bg-light-subtle" id="exampleFormControlTextarea1" rows="3">Your address here...</textarea>
+                            <select class="form-select" required aria-label="select example">
+                              <option value="">Town/City</option>
+                              <option value="1">Dhaka</option>
+                              <option value="2">New York</option>
+                              <option value="3">London</option>
+                              <option value="4">Melbourne</option>
+                              <option value="5">Ottawa</option>
+                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
+                          </div>
+                          <div class="mb-3">
+                            <textarea class="form-control" id="validationTextarea" placeholder="Your address here..." required></textarea>
+                            <div class="invalid-feedback">
+                              Please enter your address.
+                            </div>
                           </div>
                         </div>
                         <div class="right col-sm-6 col-md-5">
                           <h4>SHIP TO DIFFERENT ADDRESS</h4>
-                          <input class="form-control bg-light-subtle mb-3" type="text" value="Your name here..." aria-label="readonly input example" readonly>
-                          <input class="form-control bg-light-subtle mb-3" type="text" value="Email address here..." aria-label="readonly input example" readonly>
-                          <input class="form-control bg-light-subtle mb-3" type="text" value="Phone here..." aria-label="readonly input example" readonly>
-                          <input class="form-control bg-light-subtle mb-3" type="text" value="Company name here..." aria-label="readonly input example" readonly>
-                          <div class="input-group mb-3">
-                            <select class="form-select bg-light-subtle" id="inputGroupSelect01">
-                              <option selected>Contry</option>
-                              <option value="1">Bangladesh</option>
+                          <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your name here...">
+                          </div>                           
+                          <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email address here...">
+                          </div>                        
+                          <div class="mb-3">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Phone here...">
+                          </div>                           
+                          <div class="mb-3">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Company name here...">
+                          </div> 
+                          <div class="mb-3">
+                            <select class="form-select" required aria-label="select example">
+                              <option value="">Contry</option>
+                              <option value="1">Bengladesh</option>
                               <option value="2">United States</option>
                               <option value="3">United Kingdom</option>
                               <option value="4">Australia</option>
                               <option value="5">Canada</option>
                             </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
                           </div>
-                          <div class="input-group mb-3">
-                            <select class="form-select bg-light-subtle" id="inputGroupSelect01">
-                              <option selected>State</option>
+                          <div class="mb-3">
+                            <select class="form-select" required aria-label="select example">
+                              <option value="">State</option>
                               <option value="1">Dhaka</option>
                               <option value="2">New York</option>
                               <option value="3">London</option>
                               <option value="4">Melbourne</option>
                               <option value="5">Ottawa</option>
                             </select>
-                          </div>
-                          <div class="input-group mb-3">
-                            <select class="form-select bg-light-subtle" id="inputGroupSelect01">
-                              <option selected>Town/City</option>
-                              <option value="1">Bangladesh</option>
-                              <option value="2">United States</option>
-                              <option value="3">United Kingdom</option>
-                              <option value="4">Australia</option>
-                              <option value="5">Canada</option>
-                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
                           </div>
                           <div class="mb-3">
-                            <textarea class="form-control bg-light-subtle" id="exampleFormControlTextarea1" rows="3">Your address here...</textarea>
+                            <select class="form-select" required aria-label="select example">
+                              <option value="">State</option>
+                              <option value="1">Dhaka</option>
+                              <option value="2">New York</option>
+                              <option value="3">London</option>
+                              <option value="4">Melbourne</option>
+                              <option value="5">Ottawa</option>
+                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
+                          </div>
+                          <div class="mb-3">
+                            <textarea class="form-control" id="validationTextarea" placeholder="Your address here..." required></textarea>
+                            <div class="invalid-feedback">
+                              Please enter your address.
+                            </div>
                           </div>
                         </div>
                  </div>
@@ -288,13 +318,14 @@
                                 </div>
                               </div>
                             </div>
-                            <button class="button-one submit-button mt-15" data-text="place order" type="submit">PLACE ORDER</button>
-
+                            <div class="col-12">
+                              <button class="btn btn-danger" type="submit">Place Order</button>
+                            </div>
                         </div>
 
                       </div>
 
-                        
+              </form>           
 
              </div>
     </main>
