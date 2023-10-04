@@ -22,13 +22,13 @@ header .root{
     left: 8%;
     font-size: 13px;
 }
-.container{
+.container-fluid{
     background-color: rgb(236, 234, 234);
     width: 100%;
     padding: 100px;
 }
 .row{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     margin: 2%;
     background-color: white;
     padding: 5px;
@@ -36,19 +36,38 @@ header .root{
     margin-left: -0.2%;
     gap: 2%;
 }
-#complet{
-    border: 1px solid #000;
-    background-color: brown;
+.row1{
+    background-color: #ECEAEA;
+}
+
+.row1 span{
+    display: block;
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+#complet,
+.row1 span:hover {
+    /* border: 1px solid #000; */
+    background-color:  #C8A165;
     color: white;
 }
+#cols{
+    padding: 8px 0px;
+}
+#cols span{
+    font-size: 14px;
+}
 .validation{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     display: flex;
     background-color: white;
     
 }
 .order{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     width: 50%;
     display: grid;
     margin-right: 3%;
@@ -59,25 +78,34 @@ header .root{
 #total{
     display: flex;
     justify-content: space-around;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     background-color: rgb(236, 234, 234);
     font-weight: bold;
+    border: none;
+}
+.spa{
+    /* padding: 5px 50px ; */
+    margin-top: 3%;
+    margin-left: 3%;
 }
 .product{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #00000017;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 5px 30px;
+    opacity: 0.9;
+}
+.product:last-child{
+    border-bottom: none;
 
 }
 #order{
-    color: red;
+    color: #C8A165;
 }
 button{
-    background-color: brown;
+    background-color: #C87085;
     color: white;
     border: none;
-}
-#mesA{
-    text-decoration: none;
-    color: black;
+    font-size: 12px;
+    padding: 8px 23px;
 }
