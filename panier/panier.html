@@ -229,12 +229,13 @@
                 let stock = document.querySelectorAll('.in-stock');
                 let suppCart = document.querySelectorAll('.supp-cart');
                 let trCart = document.querySelectorAll('.tr-cart');
-
+                // Suppression de produit du produit
                 for (let index = 0; index < trCart.length; index++) {
                     suppCart[index].addEventListener('click', function() {
                         trCart[index].remove();
                     })
                 }
+                // Incrementation du panier
                 for (let index = 0; index < istatus.length; index++) {
                     istatus[index].addEventListener('click', function() {
                         if (index % 3 == 0) {
@@ -254,13 +255,14 @@
                 for (const element of vstatus) {
                     element.style.display = "none";
                 }
+                // Code qui permet de valser  entre les etapes du panier
                 cc.addEventListener('click', function () {
                     for (let index = 0; index < istatus.length; index++) {
                         for (const element of istatus) {
                             element.style.display = 'none';
                         }
                         vstatus[index].style.display = 'block';
-                        vstatus[index].style.backgroundColor = 'white';
+                        vstatus[index].style.backgroundColor = 'white'; 
                         vstatus[index].style.border = 'none';
                         c1.style.backgroundColor = 'white';
                         c1.style.color = 'black';
