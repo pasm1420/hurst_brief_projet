@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fin favicon -->
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Fin bootstrap Icon -->
+
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fin fontawsome -->
+    <link rel="stylesheet" href="panier.css">
+    <link rel="stylesheet" href="../public/style/couleur.css">
+    <title>PANIER</title>
+</head>
+
+<body class="p-0 m-0">
+    <header id="header">
+        <div class="nav-fixed d-flex justify-content-between align-items-center p-4 fixed-top bg-white">
+            <div class="burger-menu" id="burger">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="icon" id="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="list-menu list-group" id="list-nav">
+                <a href="#" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
+                <a href="../about/about.html" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">BLOG</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">CONTACT</a>
+            </div>
+            <script>
+                let menu = document.getElementById('menu');
+                let burger = document.getElementById('burger');
+                let nav = document.getElementById('list-nav');
+                menu.addEventListener('click', function () {
+                    burger.style.display = 'block';
+                    nav.style.left = "0";
+                    this.style.visibility = 'hidden';
+                });
+                burger.addEventListener('click', function () {
+                    burger.style.display = 'none';
+                    nav.style.left = "-400px";
+                    menu.style.visibility = 'visible';
+                });
+            </script>
+            <div class="icon d-flex justify-content-center">
+                <img src="../public/images/logo.png" alt="" class="logo-header w-75">
+            </div>
+            <div class="icon">
+                <div class="position-relative">
+                    <a href="../panier/panier.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="notifications"
+                            class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
+                            2
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="banner d-flex justify-content-center align-items-center flex-column">
+            <h1 class="text-center text-white">SOPPING CARD</h1>
+            <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>SOPPING CARD</span></p>
+        </div>
+    </header>
+    <main class="container">
+        <section class="panier-part row">
+            <div class="panier-component col-lg col-md-6 p-3">
+                <div class="component-content py-3 px-5" id="cc-1">
+                    <span>SHOPPING CARD</span>
+                </div>
+            </div>
+            <div class="panier-component col-lg col-md-6 p-3">
+                <div class="component-content py-3 px-5" id="cc">
+                    <span>WISHLIST</span>
+                </div>
+            </div>
+            <div class="panier-component col-lg col-md-6 p-3">
+                <div class="component-content py-3 px-5" id="cc">
+                    <span>CHECK OUT</span>
+                </div>
+            </div>
+            <div class="panier-component col-lg col-md-6 p-3" id="cc">
+                <div class="component-content py-3 px-5">
+                    <span>ORDER COMPLET</span>
+                </div>
+            </div>
+        </section>
+        <section class="section-panier bg-white">
+            <table class="">
+                <thead class="w-100">
+                    <tr class="table-cart-head">
+                        <th class="product-thumbnail">&nbsp;</th>
+                        <th class="product-name"><span>PRODUCT</span></th>
+                        <th class="product-price"><span>PRICE</span></th>
+                        <th class="product-quantity"><span id="quantity" style="min-width: 112px;">PRODUCT</span></th>
+                        <th class="product-subtotal"><span id="total" style="min-width: 112px;">TOTAL</span></th>
+                        <th class="product-remove"><span>REMOVE</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tr-cart">
+                        <td class="product-thumbnail d-flex justify-content-center">
+                            <a href="" class="panier-image">
+                                <img src="../public/images/cart/1.jpg" alt="">
+                            </a>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="cart-desc d-flex flex-column align-items-center">
+                                <span class="product-nom">DUMMY PRODUCT NAME</span>
+                                <span class="product-color">Color:Black</span>
+                                <span class="product-size">Size:SL</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <span class="fw-semibold">$56.00</span>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-quantity in-stock" id="in-stock">
+                                <span class="visible-status"><i class="fa-solid fa-minus"></i></span>
+                                <input class="visible-status" type="text" value="2" class="">
+                                <span class="visible-status"><i class="fa-solid fa-plus"></i></span>
+                                <span class="invisible-status">STOCK STATUS</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-total">
+                                <span class="fw-bolder">$112.00</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-remove">
+                                <span class="supp-cart"><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="tr-cart">
+                        <td class="product-thumbnail d-flex justify-content-center">
+                            <a href="" class="panier-image">
+                                <img src="../public/images/cart/2.jpg" alt="">
+                            </a>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="cart-desc d-flex flex-column align-items-center">
+                                <span class="product-nom">DUMMY PRODUCT NAME</span>
+                                <span class="product-color">Color:Black</span>
+                                <span class="product-size">Size:SL</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <span class="fw-semibold">$56.00</span>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-quantity in-stock" id="in-stock">
+                                <span class="visible-status"><i class="fa-solid fa-minus"></i></span>
+                                <input class="visible-status" type="text" value="2" class="">
+                                <span class="visible-status"><i class="fa-solid fa-plus"></i></span>
+                                <span class="invisible-status">STOCK STATUS</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-total">
+                                <span class="fw-bolder">$112.00</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-remove">
+                                <span class="supp-cart"><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="tr-cart">
+                        <td class="product-thumbnail d-flex justify-content-center">
+                            <a href="" class="panier-image">
+                                <img src="../public/images/cart/1.jpg" alt="">
+                            </a>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="cart-desc d-flex flex-column align-items-center">
+                                <span class="product-nom">DUMMY PRODUCT NAME</span>
+                                <span class="product-color">Color:Black</span>
+                                <span class="product-size">Size:SL</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <span class="fw-semibold">$56.00</span>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-quantity in-stock" id="in-stock">
+                                <span class="visible-status"><i class="fa-solid fa-minus"></i></span>
+                                <input class="visible-status" type="text" value="2" class="">
+                                <span class="visible-status"><i class="fa-solid fa-plus"></i></span>
+                                <span class="invisible-status">STOCK STATUS</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-total">
+                                <span class="fw-bolder">$112.00</span>
+                            </div>
+                        </td>
+                        <td class="d-flex justify-content-center">
+                            <div class="content-remove">
+                                <span class="supp-cart"><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Partie JS du panier -->
+            <script>
+                let cc = document.getElementById('cc');
+                let c1 = document.getElementById('cc-1');
+                let istatus = document.querySelectorAll('.in-stock .visible-status');
+                let vstatus = document.querySelectorAll('.invisible-status');
+                let total = document.querySelectorAll('.fw-bolder');
+                let stock = document.querySelectorAll('.in-stock');
+                let suppCart = document.querySelectorAll('.supp-cart');
+                let trCart = document.querySelectorAll('.tr-cart');
+
+                for (let index = 0; index < trCart.length; index++) {
+                    suppCart[index].addEventListener('click', function() {
+                        trCart[index].remove();
+                    })
+                }
+                for (let index = 0; index < istatus.length; index++) {
+                    istatus[index].addEventListener('click', function() {
+                        if (index % 3 == 0) {
+                            istatus[index +1].value = parseInt(istatus[index +1].value) - 1;
+                            if (istatus[index +1].value < 0) {
+                                istatus[index +1].value = 0;
+                            }
+                            if (istatus[index +1].value != number) {
+                                istatus[index +1].value = 0;
+                            }
+                        }
+                        else if (index == 2 || index == 5 || index == 8) {
+                            istatus[index -1].value = parseInt(istatus[index -1].value) + 1;
+                        }
+                    })    
+                }
+                for (const element of vstatus) {
+                    element.style.display = "none";
+                }
+                cc.addEventListener('click', function () {
+                    for (let index = 0; index < istatus.length; index++) {
+                        for (const element of istatus) {
+                            element.style.display = 'none';
+                        }
+                        vstatus[index].style.display = 'block';
+                        vstatus[index].style.backgroundColor = 'white';
+                        vstatus[index].style.border = 'none';
+                        c1.style.backgroundColor = 'white';
+                        c1.style.color = 'black';
+                        this.style.color = 'white';
+                        this.style.backgroundColor = '#CAA46A';
+                        for (const element of total) {
+                            element.innerHTML = '<i class="fa-solid fa-cart-plus"></i>';
+                        }
+                    }
+                });
+                c1.addEventListener('click', function () {
+                    for (let index = 0; index < istatus.length; index++) {
+                        for (const element of istatus) {
+                            element.style.display = 'flex';
+                        }
+                        vstatus[index].style.display = 'none';
+                        this.style.backgroundColor = '#CAA46A';
+                        this.style.color = 'white';
+                        cc.style.color = 'black';
+                        cc.style.backgroundColor = 'white';
+                        for (const element of total) {
+                            element.innerHTML = '$ 112.00';
+                        }
+                    }
+                });
+            </script>
+            <!-- Fin de la partie JS du panier -->
+        </section>
+        <section class="cart-bottom-1 row my-3">
+            <div class="c-b-1-left col-lg p-y-1 mt-4">
+                <div class="left-content p-5 bg-body">
+                    <h4 class="">COUPON DISCOUNT</h4>
+                    <div class="content-trait">
+                        <div class="l-c-trait mb-3"></div>
+                    </div>
+                    <span>Enter you coupon coupon code if you have one</span>
+                    <form action="" class="my-2">
+                        <input type="text" name="" id="" placeholder="Enter your code here" class="d-block w-100">
+                        <input type="submit" value="APPLI COUPON" class="d-block mt-4">
+                    </form>
+                </div>
+            </div>
+            <div class="c-b-1-right col-lg p-y-5 mt-4">
+                <div class="right-content p-5 bg-body">
+                    <h4>PAYMENT DETAILS</h4>
+                    <div class="content-trait">
+                        <div class="l-c-trait"></div>
+                    </div>
+                    <div class="subto-cart d-flex justify-content-between">
+                        <span class="px-3">Cart Subtotal</span>
+                        <span class="px-3">$155.00</span>
+                    </div>
+                    <div class="subto-cart d-flex justify-content-between">
+                        <span class="px-3">Cart Subtotal</span>
+                        <span class="px-3">$15.00</span>
+                    </div>
+                    <div class="subto-cart d-flex justify-content-between">
+                        <span class="px-3">Vat</span>
+                        <span class="px-3">$00.00</span>
+                    </div>
+                    <div class="subto-cart d-flex justify-content-between">
+                        <span class="px-3">Order Total</span>
+                        <span class="px-3">$170.00</span>
+                    </div>
+                </div>
+        </section>
+        <section>
+            <div class="c-b-1-left col-lg p-y-1 mt-4">
+                <div class="left-content bot-content p-5 bg-body">
+                    <h4 class="">CIRCULATES SHIPPING</h4>
+                    <div class="content-trait">
+                        <div class="l-c-trait mb-3"></div>
+                    </div>
+                    <span>Enter you coupon coupon code if you have one</span>
+                    <form action="" class="my-2">
+                        <div class="bot-input d-flex justify-content-between gap-4">
+                            <input type="text" name="" id="" placeholder="Country" class="input-bot-1 w-100">
+                            <input type="text" name="" id="" placeholder="Region / State" class="input-bot-1 w-100">
+                            <input type="text" name="" id="" placeholder="Post code" class="input-bot-1 w-100">
+                        </div>
+                        <input type="submit" value="GET A QUOTE" class="d-block mt-4">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container py-5">
+            <div class="row ms">
+                <div class="mb-3 col-md-6 col-lg-4">
+                    <h5>CONTACT US</h5>
+                    <hr>
+                    <ul class="nav d-flex" id="inf">
+                        <div class="fw-bold">
+                            <p>Address</p>
+                            <p class="mt-5">Cell Phone</p>
+                            <p>Email</p>
+                        </div>
+                        <div>
+                            <p class="ms-4">28 Green Tower,Street Name,<br>New York City,USA</p>
+                            <p class="ms-4 mt-4">012345- 123456789</p>
+                            <p class="ms-4 mt-1">your-email@gmail.com</p>
+
+                        </div>
+                        <div class="d-flex">
+                        </div>
+
+                    </ul>
+                </div>
+
+                <div class="mb-3 col-md-6 col-lg-2">
+                    <h5>ACCOUNTS</h5>
+                    <hr>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Account</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Wishlist</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Cart</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Sign in</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Check out</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-3 col-md-6 col-lg-2">
+                    <h5>SHIPPING</h5>
+                    <hr>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>New Products</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Top Sellers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Manufacturers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Suppliers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Specials</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-3 col-md-6 col-lg-4">
+                    <form>
+                        <h5>Email Newsletters</h5>
+                        <hr>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        </div>
+                        <button class="btn bg-white my-2 fw-bold" type="button" id="subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div id="bottom">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row justify-content-between">
+                    <div>
+                        <p>©Code Carnival 2021.All Rights Reserved</p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                        height="24">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg></a></li>
+                            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                        height="24">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg></a></li>
+                            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                        height="24">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="../public/images/payment/1.png" alt="">
+                        <img src="../public/images/payment/2.png" alt="">
+                        <img src="../public/images/payment/3.png" alt="">
+                        <img src="../public/images/payment/4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <a class="position-absolute bottom-25 end-25 bg-danger" href="#header">yo</a> -->
+    </footer>
+</body>
+
+</html>
