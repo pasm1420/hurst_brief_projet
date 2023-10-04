@@ -75,8 +75,8 @@ header .root{
 }
 .price{
     border: 1px solid #000;
-    /* margin-right: 200%;
-    margin-top: 200%; */
+    margin-right: 0%;
+    margin-top: 200%;
     color: rgb(218, 169, 106);
 }
 .card-body{
@@ -97,7 +97,7 @@ header .root{
     display: flex;
     justify-content: space-around;
     background-color: #f1f0f0;
-    margin-bottom: -10%;
+    margin-bottom: -33%;
 }
 nav{
     align-items: center;
