@@ -53,7 +53,7 @@ header .root{
     display: grid;
     margin-right: 3%;
 }
-h1{
+.validation h1{
     font-size: 16px;
 }
 #total{

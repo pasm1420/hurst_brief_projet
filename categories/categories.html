@@ -31,14 +31,14 @@
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="list-menu list-group" id="list-nav">
-            <a href="#" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
-            <a href="#" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
-            <a href="#" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
-            <a href="#" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
-            <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
-            <a href="#" class="list-solo list-group-item list-group-item-action">BLOG</a>
-            <a href="#" class="list-solo list-group-item list-group-item-action">CONTACT</a>
-        </div>
+          <a href="../accueil/accueil1.html" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
+          <a href="../produit/produits.html" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
+          <a href="#" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
+          <a href="../about/about.html" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
+          <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
+          <a href="../blog/blog.html" class="list-solo list-group-item list-group-item-action">BLOG</a>
+          <a href="../page_contact/contact/contact.html" class="list-solo list-group-item list-group-item-action">CONTACT</a>
+      </div>
         <script>
             let menu = document.getElementById('menu');
             let burger = document.getElementById('burger');
@@ -58,14 +58,15 @@
             <img src="../public/images/logo.png" alt="" class="logo-header w-75">
         </div>
         <div class="icon">
-            <div class="position-relative">
-                <i class="fa-solid fa-cart-shopping"></i>
+          <div class="position-relative">
+              <a href="../panier/panier.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i>
                 <span id="notifications"
                     class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
-                    12
+                    2
                 </span>
-            </div>
-        </div>
+            </a>
+          </div>
+      </div>
     </div>
     <!-- <div class="banner d-flex justify-content-center align-items-center flex-column">
         <h1 class="text-center text-white">SHOPPING CART</h1>
@@ -372,7 +373,9 @@
                           </div>
                         </div>
                         <div class="card m-2">
-                          <div class="image m-3"><img src="../public/images/product/12.jpg" class="card-img-top" alt="..."></div>
+                          <a href="../detail-produit/detail.html">
+                            <div class="image m-3"><img src="../public/images/product/12.jpg" class="card-img-top" alt="..."></div>
+                          </a>
                           <div class="new position-absolute" style="color: grey;">
                             <span class="badge text-bg-warning-subtle fs-6 text-white">New</span>
                             <p class="new-para" style="color: #d5887e;">$56.20</p>

@@ -251,7 +251,7 @@ body {
 }
 
 header .banner {
-    background: linear-gradient(0deg, #04061b67, #04061b67), url("../../public/images/bg/1.jpg");
+    background: linear-gradient(0deg, #04061b67, #04061b67), url("../images/bg/1.jpg");
     height: 240px;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+    <!-- Fin favicon -->
+    
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Fin bootstrap Icon -->
+    
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fin fontawsome -->
+    <link rel="stylesheet" href="../public/style/header-footer.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="../public/style/couleur.css">
+    <title>BLOG</title>
+</head>
+<body class="p-0 m-0">
+  <!-- A FAIRE -->
+  <!-- mettre des hovers dans le select categories price etc -->
+  <!-- mettre un hover dans les card comme dans le site -->
+  <!-- Gerer le floting btn-->
+  <header id="header">
+    <div class="nav-fixed d-flex justify-content-between align-items-center p-4 fixed-top bg-white">
+        <div class="burger-menu" id="burger">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="icon" id="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="list-menu list-group" id="list-nav">
+            <a href="../accueil/accueil1.html" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
+            <a href="../produit/produits.html" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
+            <a href="../categories/categories.html" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
+            <a href="../about/about.html" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">BLOG</a>
+            <a href="../page_contact/contact/contact.html" class="list-solo list-group-item list-group-item-action">CONTACT</a>
+        </div>
+        <script>
+            let menu = document.getElementById('menu');
+            let burger = document.getElementById('burger');
+            let nav = document.getElementById('list-nav');
+            menu.addEventListener('click', function(){
+                burger.style.display = 'block';
+                nav .style.left = "0";
+                this.style.visibility = 'hidden';
+            });
+            burger.addEventListener('click', function(){
+                burger.style.display = 'none';
+                nav.style.left = "-400px";
+                menu.style.visibility = 'visible';
+            });
+        </script>
+        <div class="icon d-flex justify-content-center">
+            <img src="../public/images/logo.png" alt="" class="logo-header w-75">
+        </div>
+        <div class="icon">
+            <div class="position-relative">
+                <a href="../panier/panier.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i>
+                  <span id="notifications"
+                      class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
+                      2
+                  </span>
+              </a>
+            </div>
+        </div>
+    </div>
+    <div class="banner d-flex justify-content-center align-items-center flex-column">
+        <h1 class="text-center text-white">BLOG</h1>
+        <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>BLOG</span></p>
+    </div>
+</header>
+    <main class="my-5">
+        <div class="container">
+            <div class="top d-flex justify-content-between bg-white px-2">
+                <nav class="nav">
+                    <a class="nav-link active" aria-current="page" href="#">Categories</a>
+                    <a class="nav-link text-body-secondary"  href="#">Price</a>
+                    <a class="nav-link text-body-secondary"  href="#">Link</a>
+                    <a class="nav-link text-body-secondary"  aria-disabled="true">Size</a>
+                  </nav>
+                  <!--bottom-0 end-0 permet de cacher le showing a md  -->
+                <div class="mt-2 mx-2 d-none d-md-block">
+                    <p>
+                        Showing 01-09 of 17 Results
+                    </p>
+                </div>
+
+            </div>
+             <div class="my-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="mx-4 mt-4">
+                          <img src="../public/images/blog/1.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body mx-2">
+                            <div class="d-flex">
+                                <div class="px-2 mt-1" id="border-card">
+                                    30
+                                </div>
+                                <div class="ms-2">
+                                    <h6 id="date-card">JUNE 2021</h6>
+                                    <h6 class="card-title">FARTNITURE DRAWING 2021</h6>
+                                    
+
+                                </div>
+                            </div>
+                          
+                          <p class="card-text">The are many variations of passages of Lorem Ipsum available, but the majority have suffered if you are going to use a passage Lorem ipsum, you alteration in some Form</p>
+                          <a id="read-more" class="fw-bold">Read More...</a>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    
+                  </div>
+
+             </div>
+             <div class="d-flex justify-content-center bg-white px-2 text-center" id="pagination">
+                <div>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div>
+                    <ul class="nav">
+                      <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">01</a></li>
+                      <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">02</a></li>
+                      <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">03</a></li>
+                      <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">04</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div class="container py-5">
+            <div class="row">
+      <div class="mb-3 col-md-6 col-lg-4">
+        <h5>CONTACT US</h5>
+        <hr>
+        <ul class="nav d-flex" id="inf">
+            <div class="fw-bold" >
+                <p>Address</p>
+                <p class="mt-5">Cell Phone</p>
+                <p>Email</p>
+            </div>
+            <div>
+                <p class="ms-4">28 Green Tower,Street Name,<br>New York City,USA</p>
+                <p class="ms-4 mt-4">012345- 123456789</p>
+                <p class="ms-4 mt-1">your-email@gmail.com</p>
+
+            </div>
+            <div class="d-flex">
+            </div>
+          
+        </ul>
+      </div>
+
+      <div class="mb-3 col-md-6 col-lg-2">
+        <h5>ACCOUNTS</h5>
+        <hr>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Account</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Wishlist</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Cart</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Sign in</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Check out</a></li>
+        </ul>
+      </div>
+
+      <div class="mb-3 col-md-6 col-lg-2">
+        <h5>SHIPPING</h5>
+        <hr>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>New Products</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Top Sellers</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Manufacturers</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Suppliers</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Specials</a></li>
+        </ul>
+      </div>
+
+      <div class="mb-3 col-md-6 col-lg-4">
+        <form>
+          <h5>Email Newsletters</h5>
+          <hr>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+        </div>
+        <button class="btn bg-white my-2 fw-bold" type="button" id="subscribe">Subscribe</button>
+        </form>
+      </div>
+            </div>
+           
+        </div>
+        <div  id="bottom">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row justify-content-between">
+                    <div>
+                        <p>©Code Carnival 2021.All Rights Reserved</p>
+                        <ul class="list-unstyled d-flex">
+                          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="../public/images/payment/1.png" alt="">
+                        <img src="../public/images/payment/2.png" alt="">
+                        <img src="../public/images/payment/3.png" alt="">
+                        <img src="../public/images/payment/4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+            <!-- <a class="position-absolute bottom-25 end-25 bg-danger" href="#header">yo</a> -->
+    </footer>
+</body>
+</html>
