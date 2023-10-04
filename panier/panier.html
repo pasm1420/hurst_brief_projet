@@ -112,7 +112,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
+                    <tr class="tr-cart">
                         <td class="product-thumbnail d-flex justify-content-center">
                             <a href="" class="panier-image">
                                 <img src="../public/images/cart/1.jpg" alt="">
@@ -131,7 +131,7 @@
                         <td class="d-flex justify-content-center">
                             <div class="content-quantity in-stock" id="in-stock">
                                 <span class="visible-status"><i class="fa-solid fa-minus"></i></span>
-                                <input class="visible-status" type="text" value="02" class="">
+                                <input class="visible-status" type="text" value="2" class="">
                                 <span class="visible-status"><i class="fa-solid fa-plus"></i></span>
                                 <span class="invisible-status">STOCK STATUS</span>
                             </div>
@@ -143,11 +143,11 @@
                         </td>
                         <td class="d-flex justify-content-center">
                             <div class="content-remove">
-                                <span><i class="fa-solid fa-xmark"></i></span>
+                                <span class="supp-cart"><i class="fa-solid fa-xmark"></i></span>
                             </div>
                         </td>
                     </tr>
-                    <tr class="">
+                    <tr class="tr-cart">
                         <td class="product-thumbnail d-flex justify-content-center">
                             <a href="" class="panier-image">
                                 <img src="../public/images/cart/2.jpg" alt="">
@@ -166,7 +166,7 @@
                         <td class="d-flex justify-content-center">
                             <div class="content-quantity in-stock" id="in-stock">
                                 <span class="visible-status"><i class="fa-solid fa-minus"></i></span>
-                                <input class="visible-status" type="text" value="02" class="">
+                                <input class="visible-status" type="text" value="2" class="">
                                 <span class="visible-status"><i class="fa-solid fa-plus"></i></span>
                                 <span class="invisible-status">STOCK STATUS</span>
                             </div>
@@ -178,11 +178,11 @@
                         </td>
                         <td class="d-flex justify-content-center">
                             <div class="content-remove">
-                                <span><i class="fa-solid fa-xmark"></i></span>
+                                <span class="supp-cart"><i class="fa-solid fa-xmark"></i></span>
                             </div>
                         </td>
                     </tr>
-                    <tr class="">
+                    <tr class="tr-cart">
                         <td class="product-thumbnail d-flex justify-content-center">
                             <a href="" class="panier-image">
                                 <img src="../public/images/cart/1.jpg" alt="">
@@ -201,7 +201,7 @@
                         <td class="d-flex justify-content-center">
                             <div class="content-quantity in-stock" id="in-stock">
                                 <span class="visible-status"><i class="fa-solid fa-minus"></i></span>
-                                <input class="visible-status" type="text" value="02" class="">
+                                <input class="visible-status" type="text" value="2" class="">
                                 <span class="visible-status"><i class="fa-solid fa-plus"></i></span>
                                 <span class="invisible-status">STOCK STATUS</span>
                             </div>
@@ -213,12 +213,13 @@
                         </td>
                         <td class="d-flex justify-content-center">
                             <div class="content-remove">
-                                <span><i class="fa-solid fa-xmark"></i></span>
+                                <span class="supp-cart"><i class="fa-solid fa-xmark"></i></span>
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <!-- Partie JS du panier -->
             <script>
                 let cc = document.getElementById('cc');
                 let c1 = document.getElementById('cc-1');
@@ -226,10 +227,37 @@
                 let vstatus = document.querySelectorAll('.invisible-status');
                 let total = document.querySelectorAll('.fw-bolder');
                 let stock = document.querySelectorAll('.in-stock');
+                let suppCart = document.querySelectorAll('.supp-cart');
+                let trCart = document.querySelectorAll('.tr-cart');
+
+                for (let index = 0; index < trCart.length; index++) {
+                    suppCart[index].addEventListener('click', function() {
+                        trCart[index].remove();
+                    })
+                }
+                for (let index = 0; index < istatus.length; index++) {
+                    istatus[index].addEventListener('click', function() {
+                        if (index % 3 == 0) {
+                            istatus[index +1].value = parseInt(istatus[index +1].value) - 1;
+                            if (istatus[index +1].value < 0) {
+                                istatus[index +1].value = 0;
+                            }
+                            if (istatus[index +1].value != number) {
+                                istatus[index +1].value = 0;
+                            }
+                        }
+                        else if (index == 2 || index == 5 || index == 8) {
+                            istatus[index -1].value = parseInt(istatus[index -1].value) + 1;
+                        }
+                    })    
+                }
+                for (const element of vstatus) {
+                    element.style.display = "none";
+                }
                 cc.addEventListener('click', function () {
                     for (let index = 0; index < istatus.length; index++) {
-                        for (let index = 0; index < istatus.length; index++) {
-                            istatus[index].style.display = 'none';
+                        for (const element of istatus) {
+                            element.style.display = 'none';
                         }
                         vstatus[index].style.display = 'block';
                         vstatus[index].style.backgroundColor = 'white';
@@ -238,33 +266,36 @@
                         c1.style.color = 'black';
                         this.style.color = 'white';
                         this.style.backgroundColor = '#CAA46A';
-                        for (let index = 0; index < total.length; index++) {
-                            total[index].innerHTML = '<i class="fa-solid fa-cart-plus"></i>';
+                        for (const element of total) {
+                            element.innerHTML = '<i class="fa-solid fa-cart-plus"></i>';
                         }
                     }
                 });
                 c1.addEventListener('click', function () {
                     for (let index = 0; index < istatus.length; index++) {
-                        for (let index = 0; index < istatus.length; index++) {
-                            istatus[index].style.display = 'flex';
+                        for (const element of istatus) {
+                            element.style.display = 'flex';
                         }
                         vstatus[index].style.display = 'none';
                         this.style.backgroundColor = '#CAA46A';
                         this.style.color = 'white';
                         cc.style.color = 'black';
                         cc.style.backgroundColor = 'white';
-                        for (let index = 0; index < total.length; index++) {
-                            total[index].innerHTML = '$ 112.00';
+                        for (const element of total) {
+                            element.innerHTML = '$ 112.00';
                         }
                     }
                 });
             </script>
+            <!-- Fin de la partie JS du panier -->
         </section>
         <section class="cart-bottom-1 row my-3">
             <div class="c-b-1-left col-lg p-y-1 mt-4">
                 <div class="left-content p-5 bg-body">
                     <h4 class="">COUPON DISCOUNT</h4>
-                    <div class="l-c-trait mb-3"></div>
+                    <div class="content-trait">
+                        <div class="l-c-trait mb-3"></div>
+                    </div>
                     <span>Enter you coupon coupon code if you have one</span>
                     <form action="" class="my-2">
                         <input type="text" name="" id="" placeholder="Enter your code here" class="d-block w-100">
@@ -275,7 +306,9 @@
             <div class="c-b-1-right col-lg p-y-5 mt-4">
                 <div class="right-content p-5 bg-body">
                     <h4>PAYMENT DETAILS</h4>
-                    <div class="l-c-trait"></div>
+                    <div class="content-trait">
+                        <div class="l-c-trait"></div>
+                    </div>
                     <div class="subto-cart d-flex justify-content-between">
                         <span class="px-3">Cart Subtotal</span>
                         <span class="px-3">$155.00</span>
@@ -298,7 +331,9 @@
             <div class="c-b-1-left col-lg p-y-1 mt-4">
                 <div class="left-content bot-content p-5 bg-body">
                     <h4 class="">CIRCULATES SHIPPING</h4>
-                    <div class="l-c-trait mb-3"></div>
+                    <div class="content-trait">
+                        <div class="l-c-trait mb-3"></div>
+                    </div>
                     <span>Enter you coupon coupon code if you have one</span>
                     <form action="" class="my-2">
                         <div class="bot-input d-flex justify-content-between gap-4">
