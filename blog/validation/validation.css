@@ -1,0 +1,79 @@
+#notifications{
+    padding: 2px 3px;
+    font-size: 9px;
+    top: 10%;
+    background-color: var(--brown);
+}
+.logo-header{
+    width: 50%;
+
+}
+header .banner{
+    background: linear-gradient(0deg, #04061b67, #04061b67), url("../public/images/bg/1.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+
+}
+header .root{
+    top: 210px;
+    left: 8%;
+    font-size: 13px;
+}
+.container{
+    background-color: rgb(236, 234, 234);
+    width: 100%;
+    padding: 100px;
+}
+.row{
+    border: 1px solid #000;
+    margin: 2%;
+    background-color: white;
+    padding: 5px;
+    width: 100%;
+    margin-left: -0.2%;
+    gap: 2%;
+}
+#complet{
+    border: 1px solid #000;
+    background-color: brown;
+    color: white;
+}
+.validation{
+    border: 1px solid #000;
+    display: flex;
+    background-color: white;
+    
+}
+.order{
+    border: 1px solid #000;
+    width: 50%;
+    display: grid;
+    margin-right: 3%;
+}
+h1{
+    font-size: 16px;
+}
+#total{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+    background-color: rgb(236, 234, 234);
+    font-weight: bold;
+}
+.product{
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+
+}
+#order{
+    color: red;
+}
+button{
+    background-color: brown;
+    color: white;
+    border: none;
+}

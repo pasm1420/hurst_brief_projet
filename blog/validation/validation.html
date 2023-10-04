@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fin favicon -->
+    
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Fin bootstrap Icon -->
+    
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fin fontawsome -->
+    <link rel="stylesheet" href="produits.css">
+    <link rel="stylesheet" href="../public/style/couleur.css">
+    <link rel="stylesheet" href="validation.css">
+    <title>validation</title>
+</head>
+<body class="p-0 m-0">
+    <header>
+        <div class="d-flex justify-content-between px-4 pt-3 mb-2">
+            <div class="icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="icon d-flex justify-content-center">
+                <img src="../public/images/logo.png" alt="" class="logo-header">
+            </div>
+            <div class="icon">
+                <div class="position-relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="notifications" class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
+                        12
+                      </span>
+                </div>
+            </div>
+        </div>
+        <div class="banner d-flex justify-content-center align-items-center flex-column">
+            <h1 class="text-center text-white">SHOP</h1>
+            <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>Shop</span></p>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class="col">shoping cart</div>
+              <div class="col">Wishlist</div>
+              <div class="col">checkout</div>
+              <div class="col" id="complet">Orde complete</div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-8">col-8</div>
+              <div class="col-4">col-4</div>
+            </div> -->
+            <div class="row">
+                <div class="col">ordernot</div>
+                <div class="col">DATE</div>
+                <div class="col">TOTAL</div>
+                <div class="col">PAYEMENT METHOD</div>
+              </div>
+              <div class="validation">
+                <div class="order">
+                     <h1>ORDER</h1>
+                    <div class="product" id="total"> 
+                        <div>PRODUCT TOTAL</div>
+                        <div>TOTAL</div>
+                </div>
+                    <div class="product">
+                        <div>Dummy Name</div>
+                        <div>$86.000</div>
+                    </div>
+                    <div class="product">
+                        <div>Dummy Name</div>
+                        <div>$86.000</div>
+                    </div>
+                    <div class="product">
+                        <div>Cart Subtotal</div>
+                        <div>$86.000</div>
+                    </div>
+                    <div class="product">
+                        <div>Shimping</div>
+                        <div>$86.000</div>
+                    </div>
+                    <div class="product">
+                        <div>Vat</div>
+                        <div>$86.000</div>
+                    </div>
+                    <div class="product" id="order">
+                        <div>Order total</div>
+                        <div>$86.000</div>
+                    </div>
+                </div>
+                <div class="payment">
+                    <h1>ORDER</h1>
+                    <div><select class="form-select" aria-label="Disabled select example" disabled>
+                        <option selected>DIRECT BANK TRANFERT</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select></div>
+                    <div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolores corporis, provident possimus culpa natus deleniti</span></div>
+                    <br><div><select class="form-select" aria-label="Disabled select example" disabled>
+                        <option selected>CHECK PAYEMENT</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select></div><br>
+                    <div><select class="form-select" aria-label="Disabled select example" disabled>
+                        <option selected>PAYPAL</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select></div>
+                    <div></div>
+                    <br><div><button>PLACE ORDER</button></div>
+                </div>
+              </div>
+          </div>
+
+    </header>
+</body>
+</html>
