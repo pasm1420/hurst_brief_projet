@@ -564,34 +564,36 @@ header .root {
     font-size: 14px;
     opacity: 0.9;
 }
-.head .gris{
+.card-head .gris{
     background-color: white;
     color: grey;
-    height: 60px;
-    width: 15%;
+    height: 70px;
+    width: 20%;
     border: none;
     box-shadow: 2px 5px 2px #ded5d5;
 
 
 }
-.head .beige{
+.card-head .beige{
     background-color: var(--marron);
     color: white;
-    height: 60px;
-    width: 15%;
+    height: 70px;
+    width: 20%;
     border: none;
     box-shadow: 2px 5px 2px #ded5d5;
 }
 .cardleft{
-
+    width: 60%;
+    /* margin-left: 10%; */
 }
 .cardright{
     width: 30%;
-    /* position: absolute;
-    margin-left: 60%; */
+    /* position: absolute; */
+    /* margin-right: 60%; */
     
     
 }
+
 .button-one{
     margin-top: 2%;
     width: 40%;
@@ -599,4 +601,10 @@ header .root {
     border: none;
     color: white;
     background-color: var(--brown);
+}
+@media screen and (min-width: 768px){
+    /* .details{
+        display: flex;
+        flex-direction: column;
+    } */
 }
