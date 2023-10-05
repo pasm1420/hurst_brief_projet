@@ -27,13 +27,13 @@ header .root{
     width: 100%;
     margin-top: 2%;
     background-color: white;
-    padding: 10px;
+    padding: 15px;
 }
-.categories span{
-margin-left: 80%;
-border: 1px solid black;
-color: #000000a1;
-padding: 10px;
+.shop{
+    width: 20%;
+    margin-left: 82%;
+    margin-top: -2%;
+    color: #363636a8;
 }
 .container{
     /* border: 1px solid #000; */
