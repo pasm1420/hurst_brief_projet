@@ -73,27 +73,45 @@
     </div>
 </header>
     <main>
-             <div class="paiementcontainer">
+             <div class="paiementcontainer container">
 
                                  <!-- boutons d'entête   -->               
-                 <div class="card-head d-flex justify-content-evenly mt-5">
-                          <!-- <button type="button" class="btn btn-secondary btn-lg">HOPPING CARTS</button>
-                          <button type="button" class="btn btn-secondary btn-lg">WISHLIST</button>
-                          <button type="button" class="btn btn-warning btn-lg text-white">CHECK OUT</button>
-                          <button type="button" class="btn btn-secondary btn-lg">ORDER COMPLETE</button> -->
+                 <!-- <div class="card-head d-flex justify-content-evenly mt-5">
                         <button class="gris">SHOPPING CART</button>
                         <button class="gris">WISHLIST</button>
                         <button class="gris">CHECK OUT</button>
                         <button class="gris">ORDER COMPLETE</button>
-                 </div>
+                 </div> -->
+                 <section class="panier-part row">
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc-1">
+                          <span>SHOPPING CARD</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc">
+                          <span>WISHLIST</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc-3">
+                          <span>CHECK OUT</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3" id="cc">
+                      <div class="component-content py-3 px-5">
+                          <span>ORDER COMPLET</span>
+                      </div>
+                  </div>
+              </section>
 
               <form class="was-validated">
             
           
                              <!-- informations clients -->
                  <div class="details row d-flex justify-content-evenly mt-5 needs-validation"  novalidate>
-                        <div class="left col-sm-6 col-md-5">
-                          <h4>BILLING DETAILS</h4>
+                        <div class="left col-sm-6 col-md-6">
+                          <h4 class="texth4 ms-1 fs-4">BILLING DETAILS</h4>
                           <div class="mb-3">
                             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your name here...">
                           </div>                          
@@ -146,8 +164,8 @@
                             </div>
                           </div>
                         </div>
-                        <div class="right col-sm-6 col-md-5">
-                          <h4>SHIP TO DIFFERENT ADDRESS</h4>
+                        <div class="right col-sm-6 col-md-6">
+                          <h4 class="texth4 ms-1 fs-4">SHIP TO DIFFERENT ADDRESS</h4>
                           <div class="mb-3">
                             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your name here...">
                           </div>                           
@@ -204,11 +222,13 @@
 
 
                  <!-- paiement_commandes -->
-                      <div class="cardpaiement row">
+                <div class="cardpaiement d-flex">
                                     <!-- our order -->
-                          <div class="cardleft col col-sm-6 col-md-6 ms-5 ps-5">
-                            <div class="col-lg-4 order-md-last">
-                              <h4 class="orderhead ms-3">OUR ORDER</h4>
+                          <div class="cardleft col-lg-6 me-1">
+                            <!-- <div class="order-md-last">
+                              
+                            </div> -->
+                              <h4 class="orderhead ms-1 fs-4">OUR ORDER</h4>
                               <div class="card-header shadow-sm d-flex justify-content-between" style="color: grey;">
                                 <span class="prodhead ms-3">PRODUCT</span>
                                 <p class="tothead me-3">TOTAL</p>
@@ -251,60 +271,64 @@
                               </ul>
                       
                             </div>
+
+                                  <!-- ....debut_cardlet..... -->
+
+                                  
+                        <div class="cardright col-lg-6 me-3">
+                          <h4 class="orderhead ms-1 fs-4">PAYMENT METHOD</h4>
+                          <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                  DIRECT BANK TRANSFER
+                                </button>
+                              </h2>
+                              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                  Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                  CHEQUE PAYMENT
+                                </button>
+                              </h2>
+                              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                  Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                  PAYPAL
+                                </button>
+                              </h2>
+                              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                  <div class="payment-content">
+                                    <p>Pay via PayPal; you can pay with your credit card if you don�t have a PayPal account.</p>
+                                    <a href="#"><img src="../public/images/payment/1.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/2.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/3.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/4.png" alt="" /></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-
-                        <div class="cardright col-sm-6 col-md-6 ps-5">
-                            <h4 class="orderhead ms-3">PAYMENT METHOD</h4>
-                            <div class="accordion" id="accordionPanelsStayOpenExample">
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                    DIRECT BANK TRANSFER
-                                  </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                  <div class="accordion-body">
-                                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                    CHEQUE PAYMENT
-                                  </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                                  <div class="accordion-body">
-                                    Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                    PAYPAL
-                                  </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                                  <div class="accordion-body">
-                                    <div class="payment-content">
-                                      <p>Pay via PayPal; you can pay with your credit card if you don�t have a PayPal account.</p>
-                                      <a href="#"><img src="../public/images/payment/1.png" alt="" /></a>
-                                      <a href="#"><img src="../public/images/payment/2.png" alt="" /></a>
-                                      <a href="#"><img src="../public/images/payment/3.png" alt="" /></a>
-                                      <a href="#"><img src="../public/images/payment/4.png" alt="" /></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                              <button class="btn btn-danger" type="submit">Place Order</button>
-                            </div>
-                        </div>
-
+                          <div class="col-12">
+                            <button class="btn btn-danger" type="submit">Place Order</button>
+                          </div>
                       </div>
+                </div>
+
+
+     </div>
 
               </form>           
 
