@@ -674,9 +674,19 @@ footer input{
 .card-body .size{
     width: 12%;
     height: 30px;
-    background-color: hsl(26, 68%, 51%);
+    background-color: rgba(221, 218, 218, 0.868);
+    color: grey;
     text-align: center;
 }
+.card-body .size:hover{
+    transform: scale(1.2);
+    background-color: var(--marron);
+    color: white;
+}
+.card-body .size{
+    transition: transform 0.3s;
+}
+
 .card-like .notes li{
     list-style-type: none;
 }
