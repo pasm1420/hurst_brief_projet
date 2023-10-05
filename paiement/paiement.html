@@ -75,59 +75,54 @@
         <p class="position-absolute root text-white "><a href="../accueil/accueil1.html"><span class="fw-bold">HOME</span></a> &nbsp; / <span>CHECK OUT</span></p>
     </div>
 </header>
-    <main>
-             <div class="paiementcontainer">
+    <main class="content bg-secondary-subtle">
+             <div class="paiementcontainer container">
 
-                                 <!-- boutons d'entête   -->               
-                 <div class="card-head d-flex justify-content-evenly mt-5">
-                          <!-- <button type="button" class="btn btn-secondary btn-lg">HOPPING CARTS</button>
-                          <button type="button" class="btn btn-secondary btn-lg">WISHLIST</button>
-                          <button type="button" class="btn btn-warning btn-lg text-white">CHECK OUT</button>
-                          <button type="button" class="btn btn-secondary btn-lg">ORDER COMPLETE</button> -->
-                 
-                        <button class="gris">
-                          <a href="../panier/panier.html" id="mesA">               
-                            SHOPPING CART
-                          </a>
-                        </button>
-                        <button class="gris">
-                          <a href="../panier/panier.html" id="mesA">
-                            WISHLIST
-                          </a>
-                        </button>
-                        <button class="beige">
-                          <a href="#" id="mesA">
-                            CHECK OUT
-                          </a>
-                        </button>
-                        <button class="gris">
-                          <a href="../validation/validation.html" id="mesA">
-                            ORDER COMPLETE
-                          </a>
-                        </button>
-                 </div>
+            
+                 <section class="panier-part row">
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc-1">
+                          <span>SHOPPING CARD</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc">
+                          <span>WISHLIST</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc-3">
+                          <span>CHECK OUT</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3" id="cc">
+                      <div class="component-content py-3 px-5">
+                          <span>ORDER COMPLET</span>
+                      </div>
+                  </div>
+              </section>
 
-              <form class="was-validated">
+              <form class="was-validated bg-white">
             
           
                              <!-- informations clients -->
                  <div class="details row d-flex justify-content-evenly mt-5 needs-validation"  novalidate>
-                        <div class="left col-sm-6 col-md-5">
-                          <h4>BILLING DETAILS</h4>
-                          <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your name here...">
+                        <div class="left col-sm-6 col-md-6">
+                          <h4 class="texth4 ms-3 mt-3 fs-5">BILLING DETAILS</h4>
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Your name here...">
                           </div>                          
-                          <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email address here...">
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Email address here...">
                           </div>                           
-                          <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone here...">
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Phone here...">
                           </div>                           
-                          <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Company name here...">
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Company name here...">
                           </div> 
-                          <div class="mb-3">
-                            <select class="form-select" required aria-label="select example">
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
                               <option value="">Contry</option>
                               <option value="1">Bengladesh</option>
                               <option value="2">United States</option>
@@ -137,8 +132,8 @@
                             </select>
                             <div class="invalid-feedback">Please open this select menu</div>
                           </div>
-                          <div class="mb-3">
-                            <select class="form-select" required aria-label="select example">
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
                               <option value="">State</option>
                               <option value="1">Dhaka</option>
                               <option value="2">New York</option>
@@ -148,8 +143,8 @@
                             </select>
                             <div class="invalid-feedback">Please open this select menu</div>
                           </div>
-                          <div class="mb-3">
-                            <select class="form-select" required aria-label="select example">
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
                               <option value="">Town/City</option>
                               <option value="1">Dhaka</option>
                               <option value="2">New York</option>
@@ -159,29 +154,31 @@
                             </select>
                             <div class="invalid-feedback">Please open this select menu</div>
                           </div>
-                          <div class="mb-3">
-                            <textarea class="form-control" id="validationTextarea" placeholder="Your address here..." required></textarea>
+                          <div class="m-3">
+                            <textarea class="form-control bg-secondary-subtle" id="validationTextarea" placeholder="Your address here..." required></textarea>
                             <div class="invalid-feedback">
                               Please enter your address.
                             </div>
                           </div>
                         </div>
-                        <div class="right col-sm-6 col-md-5">
-                          <h4>SHIP TO DIFFERENT ADDRESS</h4>
-                          <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your name here...">
+
+
+                        <div class="right col-sm-6 col-md-6">
+                          <h4 class="texth4 ms-3 mt-3 fs-5">SHIP TO DIFFERENT ADDRESS</h4>
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Your name here...">
                           </div>                           
-                          <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email address here...">
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Email address here...">
                           </div>                        
-                          <div class="mb-3">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Phone here...">
+                          <div class="m-3">
+                            <input type="text" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Phone here...">
                           </div>                           
-                          <div class="mb-3">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Company name here...">
+                          <div class="m-3">
+                            <input type="text" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Company name here...">
                           </div> 
-                          <div class="mb-3">
-                            <select class="form-select" required aria-label="select example">
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
                               <option value="">Contry</option>
                               <option value="1">Bengladesh</option>
                               <option value="2">United States</option>
@@ -191,8 +188,8 @@
                             </select>
                             <div class="invalid-feedback">Please open this select menu</div>
                           </div>
-                          <div class="mb-3">
-                            <select class="form-select" required aria-label="select example">
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
                               <option value="">State</option>
                               <option value="1">Dhaka</option>
                               <option value="2">New York</option>
@@ -202,9 +199,9 @@
                             </select>
                             <div class="invalid-feedback">Please open this select menu</div>
                           </div>
-                          <div class="mb-3">
-                            <select class="form-select" required aria-label="select example">
-                              <option value="">State</option>
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
+                              <option value="">Town/City</option>
                               <option value="1">Dhaka</option>
                               <option value="2">New York</option>
                               <option value="3">London</option>
@@ -213,8 +210,8 @@
                             </select>
                             <div class="invalid-feedback">Please open this select menu</div>
                           </div>
-                          <div class="mb-3">
-                            <textarea class="form-control" id="validationTextarea" placeholder="Your address here..." required></textarea>
+                          <div class="m-3">
+                            <textarea class="form-control bg-secondary-subtle" id="validationTextarea" placeholder="Your address here..." required></textarea>
                             <div class="invalid-feedback">
                               Please enter your address.
                             </div>
@@ -224,14 +221,16 @@
 
 
                  <!-- paiement_commandes -->
-                      <div class="cardpaiement row">
+                <div class="cardpaiement d-flex">
                                     <!-- our order -->
-                          <div class="cardleft col col-sm-6 col-md-6 ms-5 ps-5">
-                            <div class="col-lg-4 order-md-last">
-                              <h4 class="orderhead ms-3">OUR ORDER</h4>
-                              <div class="card-header shadow-sm d-flex justify-content-between" style="color: grey;">
-                                <span class="prodhead ms-3">PRODUCT</span>
-                                <p class="tothead me-3">TOTAL</p>
+                          <div class="cardleft col-lg-6 mt-2 p-4">
+                            <!-- <div class="order-md-last">
+                              
+                            </div> -->
+                              <h4 class="orderhead ms-1 mb-4 fs-5">OUR ORDER</h4>
+                              <div class="card-header shadow-sm d-flex justify-content-between bg-secondary-subtle" style="color: grey;">
+                                <span class="prodhead mt-2 ms-3 shadow-sm">PRODUCT</span>
+                                <p class="tothead mt-2 me-3">TOTAL</p>
                               </div>
                               <ul class="list-group mb-3">
                                 <li class="list-group-item d-flex justify-content-between lh-sm">
@@ -271,60 +270,59 @@
                               </ul>
                       
                             </div>
+
+                                  <!-- ....debut_cardrightt..... -->
+
+                                  
+                        <div class="cardright col-lg-6 mt-2 p-4">
+                          <h4 class="orderhead ms-1 mb-4 fs-5">PAYMENT METHOD</h4>
+                          <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-secondary-subtle border-2 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                  DIRECT BANK TRANSFER
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-secondary-subtle border-2 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                  CHEQUE PAYMENT
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-secondary-subtle border-2 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                  PAYPAL
+                                </button>
+                              </h2>
+                              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                  <div class="payment-content">
+                                    <p>Pay via PayPal; you can pay with your credit card if you don�t have a PayPal account.</p>
+                                    <a href="#"><img src="../public/images/payment/1.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/2.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/3.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/4.png" alt="" /></a>
+                                  </div>
+                                </div>                              </div>
+                            </div>
                           </div>
-
-                        <div class="cardright col-sm-6 col-md-6 ps-5">
-                            <h4 class="orderhead ms-3">PAYMENT METHOD</h4>
-                            <div class="accordion" id="accordionPanelsStayOpenExample">
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                    DIRECT BANK TRANSFER
-                                  </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                  <div class="accordion-body">
-                                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                    CHEQUE PAYMENT
-                                  </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                                  <div class="accordion-body">
-                                    Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                    PAYPAL
-                                  </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                                  <div class="accordion-body">
-                                    <div class="payment-content">
-                                      <p>Pay via PayPal; you can pay with your credit card if you don�t have a PayPal account.</p>
-                                      <a href="#"><img src="../public/images/payment/1.png" alt="" /></a>
-                                      <a href="#"><img src="../public/images/payment/2.png" alt="" /></a>
-                                      <a href="#"><img src="../public/images/payment/3.png" alt="" /></a>
-                                      <a href="#"><img src="../public/images/payment/4.png" alt="" /></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                              <button class="btn btn-danger" type="submit">Place Order</button>
-                            </div>
-                        </div>
-
+                          <div class="col-12 mt-2">
+                            <button class="btn btn-danger" type="submit">Place Order</button>
+                          </div>
                       </div>
+                </div>
+
+
+     </div>
 
               </form>           
 
