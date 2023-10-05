@@ -27,7 +27,13 @@ header .root{
     width: 100%;
     margin-top: 2%;
     background-color: white;
-    padding: 15px;
+    padding: 10px;
+}
+.categories span{
+margin-left: 80%;
+border: 1px solid black;
+color: #000000a1;
+padding: 10px;
 }
 .container{
     /* border: 1px solid #000; */
@@ -37,10 +43,10 @@ header .root{
     background-color: #f1f1f1;
     padding-bottom: 300px;
 }
-.container a{
+.categories a{
     text-decoration: none;
-    color: #363636;
-    margin: 2%;
+    color: #363636a8;
+    margin: 2%; 
 }
 .card{
     margin-top: 6%;
@@ -60,6 +66,40 @@ header .root{
     margin-top: 4%;
     margin-bottom: 26%;
 }
+#photo1{
+    background-image: url(image/10.jpg);
+
+}
+#photo2{
+    background-image: url(image/11.jpg);
+} 
+#photo3{
+    background-image: url(image/12.jpg);
+} 
+#photo4{
+    background-image: url(image/2.jpg);
+} 
+#photo5{
+    background-image: url(image/3.jpg);
+} 
+#photo6{
+    background-image: url(image/4.jpg);
+} 
+#photo7{
+    background-image: url(image/5.jpg);
+} 
+#photo8{
+    background-image: url(image/6.jpg);
+} 
+#photo9{
+    background-image: url(image/7.jpg);
+} 
+#photo10{
+    background-image: url(image/8.jpg);
+} 
+#photo0{
+    background-image: url(image/9.jpg);
+}  
 .new{
     display: flex;
     justify-content: space-between;
@@ -70,7 +110,6 @@ header .root{
     /* border: 1px solid #000; */
 }
 .ne{
-    /* border: 1px solid #000; */
     background-color:rgb(218, 169, 106);
     color: white;
     margin-right: -2%;
@@ -79,7 +118,6 @@ header .root{
     height: 10%;
 }
 .price{
-    /* border: 1px solid #000; */
     color: rgb(218, 169, 106);
     margin-right: 6%;
     margin-left: -30%;
@@ -88,9 +126,6 @@ header .root{
 }
 #prix{
     margin-left: 45%;
-}
-.card-body{
-    /* border: 1px solid #000;   */
 }
 .card-text{
     margin-top: -30%; 
