@@ -1,128 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Lien booststrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Fin favicon -->
-    
+
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <!-- Fin bootstrap Icon -->
-    
+
     <!-- Fontawsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fin fontawsome -->
-    <link rel="stylesheet" href="produits.css">
-    <link rel="stylesheet" href="../public/style/couleur.css">
     <link rel="stylesheet" href="validation.css">
-    <title>validation</title>
+    <link rel="stylesheet" href="../public/style/couleur.css">
+    <title>PANIER</title>
 </head>
+
 <body class="p-0 m-0">
-    <header>
-        <div class="d-flex justify-content-between px-4 pt-3 mb-2">
-            <div class="icon">
+    <header id="header">
+        <div class="nav-fixed d-flex justify-content-between align-items-center p-4 fixed-top bg-white">
+            <div class="burger-menu" id="burger">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="icon" id="menu">
                 <i class="fa-solid fa-bars"></i>
             </div>
+            <div class="list-menu list-group" id="list-nav">
+                <a href="#" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
+                <a href="../about/about.html" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">BLOG</a>
+                <a href="#" class="list-solo list-group-item list-group-item-action">CONTACT</a>
+            </div>
+            <script>
+                let menu = document.getElementById('menu');
+                let burger = document.getElementById('burger');
+                let nav = document.getElementById('list-nav');
+                menu.addEventListener('click', function () {
+                    burger.style.display = 'block';
+                    nav.style.left = "0";
+                    this.style.visibility = 'hidden';
+                });
+                burger.addEventListener('click', function () {
+                    burger.style.display = 'none';
+                    nav.style.left = "-400px";
+                    menu.style.visibility = 'visible';
+                });
+            </script>
             <div class="icon d-flex justify-content-center">
-                <img src="../public/images/logo.png" alt="" class="logo-header">
+                <img src="../public/images/logo.png" alt="" class="logo-header w-75">
             </div>
             <div class="icon">
                 <div class="position-relative">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="notifications" class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
-                        12
-                      </span>
+                    <a href="../panier/panier.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="notifications"
+                            class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
+                            2
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="banner d-flex justify-content-center align-items-center flex-column">
-            <h1 class="text-center text-white">SHOP</h1>
-            <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>Shop</span></p>
+            <h1 class="text-center text-white">SOPPING CARD</h1>
+            <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>SOPPING
+                    CARD</span></p>
+        </div>
+    </header>
+    <main class="container">
+        <section class="panier-part row">
+            <div class="panier-component col-lg col-md-6 p-3">
+                <div class="component-content py-3 px-5" id="cc-1">
+                    <span>SHOPPING CARD</span>
+                </div>
+            </div>
+            <div class="panier-component col-lg col-md-6 p-3">
+                <div class="component-content py-3 px-5" id="cc">
+                    <span>WISHLIST</span>
+                </div>
+            </div>
+            <div class="panier-component col-lg col-md-6 p-3">
+                <div class="component-content py-3 px-5" id="cc">
+                    <span>CHECK OUT</span>
+                </div>
+            </div>
+            <div class="panier-component col-lg col-md-6 p-3" id="">
+                <div class="component-content cc4 py-3 px-5">
+                    <span>ORDER COMPLET</span>
+                </div>
+            </div>
+        </section>
+        <section class="barre-commnde row text-center p-1 m-1">
+            <div class="barre col-lg col-md-6 p-2"><div>ORDER NO <span>M 2653257</span></div></div>
+            <div class="barre col-lg col-md-6 p-2"><div>DATE <span>JUNE 15, 2021</span></div></div>
+            <div class="barre col-lg col-md-6 p-2"><div>TOTAL <span>$170</span></div></div>
+            <div class="barre col-lg col-md-6 p-2"><div>PAYMENT METHOD <span>CHECK PAYMENT</span></div></div>
+        </section>
+        <section class="row-3 row bg-body mx-1 my-3 py-4">
+            <div class="commande-method col col-lg">
+                <div class="ms-lg-4">
+                    <h5>OUR ORDER</h5>
+                    <div class="trait"></div>
+                    <table class="table-order">
+                        <tr class="tr1">
+                            <th class="">PRODUCT</th>
+                            <th class="">TOTAL</th>
+                        </tr>
+                        <tr>
+                            <td>DummyProductNamex2</td>
+                            <td>$86.00</td>
+                        </tr>
+                        <tr>
+                            <td>DummyProductNamex1</td>
+                            <td>$69.00</td>
+                        </tr>
+                        <tr>
+                            <td>CArt Subtotal</td>
+                            <td>$115.00</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping and Handing</td>
+                            <td>$15.00</td>
+                        </tr>
+                        <tr>
+                            <td>Vat</td>
+                            <td>$00.00</td>
+                        </tr>
+                        <tr class="last-tr-1">
+                            <td>Order Total</td>
+                            <td>$170.00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="commande-method col col-lg">
+                <div class="ms-lg-4">
+                    <h5>PEYMENT METHOD</h5>
+                    <div class="trait"></div>
+                    <div class="dropdown">
+                        <button id="drop-menu" class="drop-menu btn dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <script>
+                                let m = document.getElementById('drop-menu');
+                                m.addEventListener('click', function() {
+                                    this.style.border = 'none';
+                                    this.style.backgroundColor = '#F5F5F5';
+                                })
+                            </script>
+                            DIRECT BANK TRANFER
+                        </button>
+                        <div class="dro-menu dropdown-menu w-100 p-4">
+                            <p class="fsi-menu">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorem saepe, reiciendis perspiciatis quisquam rem ut id maiores at praesentium excepturi nihil! Voluptatibus magni laudantium at magnam, adipisci ipsum blanditiis?</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button id="drop-menu" class="drop-menu btn dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CHEQUE PAYMENT
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button id="drop-menu" class="drop-menu btn dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            PAYPAL
+                        </button>
+                    </div>
+                    <button class="bouton-order py-2 px-4">PLACE ORDER</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container py-5">
+            <div class="row ms">
+                <div class="mb-3 col-md-6 col-lg-4">
+                    <h5>CONTACT US</h5>
+                    <hr>
+                    <ul class="nav d-flex" id="inf">
+                        <div class="fw-bold">
+                            <p>Address</p>
+                            <p class="mt-5">Cell Phone</p>
+                            <p>Email</p>
+                        </div>
+                        <div>
+                            <p class="ms-4">28 Green Tower,Street Name,<br>New York City,USA</p>
+                            <p class="ms-4 mt-4">012345- 123456789</p>
+                            <p class="ms-4 mt-1">your-email@gmail.com</p>
+
+                        </div>
+                        <div class="d-flex">
+                        </div>
+
+                    </ul>
+                </div>
+
+                <div class="mb-3 col-md-6 col-lg-2">
+                    <h5>ACCOUNTS</h5>
+                    <hr>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Account</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Wishlist</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>My Cart</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Sign in</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Check out</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-3 col-md-6 col-lg-2">
+                    <h5>SHIPPING</h5>
+                    <hr>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>New Products</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Top Sellers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Manufacturers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Suppliers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                    class="fa-regular fa-circle-dot me-2"></i>Specials</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-3 col-md-6 col-lg-4">
+                    <form>
+                        <h5>Email Newsletters</h5>
+                        <hr>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        </div>
+                        <button class="btn bg-white my-2 fw-bold" type="button" id="subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
 
         </div>
-
-        <div class="container-fluid">
-            <div class="row row1 border border-5 justify-content-center">
-              <div class="col border border-5"><span class="shop">shoping cart</span></div>
-              <div class="col border border-5"> <span class="shop">Wishlist</span></div>
-              <div class="col border border-5"> <span class="shop">checkout</span></div>
-              <div class="col border border-5" id="complet"><span class="shop">order complet</span></div>
+        <div id="bottom">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row justify-content-between">
+                    <div>
+                        <p>©Code Carnival 2021.All Rights Reserved</p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                        height="24">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg></a></li>
+                            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                        height="24">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg></a></li>
+                            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                        height="24">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="../public/images/payment/1.png" alt="">
+                        <img src="../public/images/payment/2.png" alt="">
+                        <img src="../public/images/payment/3.png" alt="">
+                        <img src="../public/images/payment/4.png" alt="">
+                    </div>
+                </div>
             </div>
-            <!-- <div class="row">
-              <div class="col-8">col-8</div>
-              <div class="col-4">col-4</div>
-            </div> -->
-            <div class="row">
-                <div class="col text-center" id="cols">ORDERNO <br><span>M2653257</span></div>
-                <div class="col text-center" id="cols">DATE <br><span>M2653257</span></div>
-                <div class="col text-center" id="cols">TOTAL <br><span>M2653257</span></div>
-                <div class="col text-center" id="cols">PAYEMENT METHOD <br><span>M2653257</span></div>
-            </div>
-              <div class="validation row p-5">
-                <div class="order col">
-                     <h1>OUR ORDER</h1>
-                    <div class="product" id="total" > 
-                        <div>PRODUCT TOTAL</div>
-                        <div>TOTAL</div>
-                </div>
-                    <div class="product">
-                        <div>Dummy Name</div>
-                        <div>$86.000</div>
-                    </div>
-                    <div class="product">
-                        <div>Dummy Name</div>
-                        <div>$86.000</div>
-                    </div>
-                    <div class="product">
-                        <div>Cart Subtotal</div>
-                        <div>$86.000</div>
-                    </div>
-                    <div class="product">
-                        <div>Shimping</div>
-                        <div>$86.000</div>
-                    </div>
-                    <div class="product">
-                        <div>Vat</div>
-                        <div>$86.000</div>
-                    </div>
-                    <div class="product" id="order">
-                        <div>Order total</div>
-                        <div>$86.000</div>
-                    </div>
-                </div>
-                <div class="payment col">
-                    <h1 class="pb-2">PAYMENT METHOD</h1>
-                    <div><select class="form-select" aria-label="Disabled select example" disabled>
-                        <option selected>DIRECT BANK TRANFERT</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select></div>
-                    <div class="spa"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolores corporis, provident possimus culpa natus deleniti</span></div>
-                    <br><div><select class="form-select" aria-label="Disabled select example" disabled>
-                        <option selected>CHECK PAYEMENT</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select></div><br>
-                    <div><select class="form-select" aria-label="Disabled select example" disabled>
-                        <option selected>PAYPAL</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select></div>
-                    <div></div>
-                    <br><div><button>PLACE ORDER</button></div>
-                </div>
-              </div>
-          </div>
+        </div>
 
-    </header>
+        <!-- <a class="position-absolute bottom-25 end-25 bg-danger" href="#header">yo</a> -->
+    </footer>
 </body>
+
 </html>
