@@ -595,18 +595,17 @@ header .root {
     width: 20%;
     border: none;
     box-shadow: 2px 5px 2px #ded5d5;
-} */
+}  */
 /* .cardleft{
-    width: 60%;
-    margin-left: 10%;
+    height: 200px;
 }
 .cardright{
-    width: 30%;
-    position: absolute;
-    margin-right: 60%;
     
     
 } */
+.details{
+    height: 600px;
+}
 
 .button-one{
     margin-top: 2%;
@@ -616,9 +615,12 @@ header .root {
     color: white;
     background-color: var(--brown);
 }
-@media screen and (min-width: 768px){
-    /* .details{
-        display: flex;
-        flex-direction: column;
-    } */
+
+.paiementcontainer{
+    height: 1280px;
+    width: 70%;
+}
+.was-validated{
+     height: 1020px;
+     width: 100%;
 }

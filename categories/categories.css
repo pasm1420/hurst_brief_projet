@@ -662,7 +662,7 @@ footer input{
     height: 500px;
 }
 .new .new-paraprim{
-    margin-left: 230px;
+    margin-left: 200px;
     font-weight: bold;
     
 }
@@ -767,7 +767,8 @@ footer input{
     width: 99%;
     height: 60px;
     background-color: white;
-    margin-top: 1%;
+    margin-top: 5%;
     align-items: center;
     /* margin-left: 1% */
 }
+
