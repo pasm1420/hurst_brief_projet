@@ -35,13 +35,14 @@ header .root{
     margin-top: -2%;
     color: #363636a8;
 }
-.container{
-    /* border: 1px solid #000; */
+.container-fluid{
+    border: 1px solid #000;
     display: flex;
-    gap: 2%;
     flex-wrap: wrap;
     background-color: #f1f1f1;
-    padding-bottom: 90px;
+    padding-bottom: 50px;
+    margin-bottom: 2%;
+    width: 100%;
 }
 .categories a{
     text-decoration: none;
@@ -50,7 +51,7 @@ header .root{
 }
 .card{
     margin-top: 6%;
-    margin-left: 6%;
+    margin-left: 5%;
     box-sizing: border-box;
     height: 30%;
 }
@@ -104,10 +105,7 @@ header .root{
     display: flex;
     justify-content: space-between;
     position: relative;
-    /* color: white; */
-    /* margin-right: 500%; */
     width: 100px;
-    /* border: 1px solid #000; */
 }
 .ne{
     background-color:rgb(218, 169, 106);
@@ -131,7 +129,6 @@ header .root{
     margin-top: -30%; 
 }
 .star{
-    /* border: 1px solid #000; */
     margin-top: -5%;
     font-size: 10px;
     width: 50%;
@@ -144,7 +141,7 @@ header .root{
     display: flex;
     justify-content: space-around;
     background-color: #f1f0f0;
-    margin-bottom: -25%;
+    margin-bottom: -2%;
     padding: 10px;
 }
 nav{
@@ -169,3 +166,109 @@ nav{
 i{
     margin-top: 1.5%;
 }
+
+
+ @media screen and (max-width: 768px){
+        main{
+            margin: 0 auto;
+            padding: 0;
+        }
+    .container-fluid{
+        display: grid;
+        margin: auto;
+    }
+    .allcard{
+        margin-top: 50px;
+        gap: 20px;
+    }
+    .card{
+        border: 1px solid #000;
+        height: 400px;
+        /* margin-left: 10%; */
+        margin: 0 auto;
+    }
+    
+    
+}
+@media screen and (max-width: 1190px){
+    main{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .allcard{
+        margin-top: 50px;
+        gap: 20px;
+    }
+    .card{
+        border: 1px solid #000;
+        height: 400px;
+        /* margin-left: 10%; */
+        margin: 0 auto;
+    }
+    .categories{
+        display: grid;
+        grid-template-columns: auto;
+        /* width: auto; */
+    }
+    .shop{
+        margin-top: -20%;
+    }
+}
+/*
+    @media screen and (max-width: 768px){
+    header{
+        margin: 0;
+        padding: 0;
+    }
+    .container-fluid{
+        display: grid;
+        margin: 0;
+        width: auto;
+    }
+    .card{
+        border: 1px solid #000;
+        height: 15%;
+        margin-top: 7%;
+        margin-left: 10%;
+    }
+    .categories{
+        display: grid;
+        width: auto;
+        margin-top: 2%;
+        background-color: white;
+        padding: 15px;
+    }
+    .shop{
+        width: 80%;
+        margin-left: 65%;
+        margin-top: -15%;
+        color: #363636a8;
+    }
+}
+@media screen and (min-width: 120px){
+    .container-fluid{
+        display: grid;
+        margin: 0;
+        width: auto;
+        height: 100%;
+    }
+    .card{
+        border: 1px solid #000;
+        height: 9%;
+        margin-top: 1%;
+        margin-left: 10%;
+    }
+    .categories{
+        display: grid;
+        width: auto;
+        margin-top: 2%;
+        background-color: white;
+        padding: 15px;
+    }
+    .shop{
+        width: 80%;
+        margin-left: 65%;
+        margin-top: -15%;
+        color: #363636a8;
+    }
+} */
