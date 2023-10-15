@@ -132,83 +132,88 @@ form button{
     }
     
  }
- @media  screen and (min-width : 576px ) and (max-width : 768px) {
+ @media  screen and (max-width : 768px) {
 
-    #icons-bottom{
-        margin-top: 20px;
-        margin-left: 5px !important;
+
+    #chairs-image{
+        display: flex;
+        justify-content: center;
+        width: 100%; 
     }
+
+    #chairs-image img{
+        width: 100%;
+        margin-left: 0 !important;
+
+    }
+    #entete{
+        margin: 10px 0 0 0 !important;
+    }
+    #carts{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-right: 40px;
+    }
+    #icons , #carouselExample{
+        padding: 0 20px !important;
+    }
+
     .carousel-control-prev, .carousel-control-next{
         background-color: none;
-        width: 3vh;
-        height: 20%;
+        width: 5vh;
+        height: 70%;
         top: 50%;
         transform: translateY(-50%);
-    }
-    #carouselExample{
-        max-width: 90%;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    #list-tab{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        justify-content: center;
-        align-items: center;
-
-    }
+        margin: 0 10px;
 
 
-    #content{
+    }
+    #infos .list-group{
+        width: 100%;
+    }
+    #infos{
+        padding: 0 !important;
+        margin-top: 15px;
+
+    }
+    #infos .list-group-item{
+        width: 100% !important;
+    }
+    #card-body-head{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 auto !important;
+        width: 80%;
+    }
+    .reviews .card img{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto !important;
+    }
+    .reviews .card p{
+       margin-top: 10px;
+    }
+    #input2{
+       margin-top: 13px;
     }
 
-    .reviews #card .card-body{
-        margin:10px 0 0 0 !important;
+    #card-body-head div{
+        margin-top: 20px;
     }
+
     
  }
 
  @media  screen and (max-width : 576px ) {
-  
-    #icons-bottom{
-        margin-top: 20px;
-    }
-    .carousel-control-prev, .carousel-control-next{
-        background-color: none;
-        width: 3vh;
-        height: 20%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    #carouselExample{
-        max-width: 90%;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    #list-tab{
+
+    #carts{
         display: grid;
-        grid-template-columns: auto auto ;
-        justify-content: center;
-        align-items: center;
-
+        grid-template-columns: repeat(1,1fr);
+        margin-right: 40px;
     }
-
-
-    #content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .reviews #card .card-body{
-        margin:10px 0 0 0 !important;
-    }
-    
+    #icons-bottom{
+        margin: 20px 0 0 10px ! important;
+    }  
  }
