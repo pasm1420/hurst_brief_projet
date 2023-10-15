@@ -130,6 +130,15 @@ form button{
         top: 50%;
         transform: translateY(-50%);
     }
+
+    #carts{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-right: 40px;
+    }
+    #icons-bottom{
+        margin: 20px 0 0 10px ! important;
+    } 
     
  }
  @media  screen and (max-width : 768px) {
